@@ -9,7 +9,7 @@
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
   </head>
-	<body onload="defTitre1()">
+	<body onload="defTitre2()">
 		<h1 id="titre">
 			nani sore
 		</h1>
@@ -31,13 +31,13 @@
 	</body>
 	
 	<script type="text/javascript">
-		function defTitre1(){
+		/*function defTitre1(){
 			document.title = document.getElementById("titre").innerHTML;
-		}
-		
-		/*function defTitre2(){
-			window.parent.document.title = document.getElementsByClassName("h2");
 		}*/
+		
+		function defTitre2(){
+			document.title = document.getElementsByTagName("h2")[0].innerHTML;
+		}
 		
 	</script>
 </html>
