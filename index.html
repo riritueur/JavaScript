@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <title> exercice 1 </title>
     <meta charset="utf-8">
 
-    <!-- font -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
 
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
   </head>
-	<body onload="defTitre3()">
+<body>
+  <h1 id="titre">
+    Salut
+  </h1>
+  <h2>
+    h2
+  </h2>
+  <h2>
+
+  </h2>
+  <h3>
+
+  </h3>
+  <h3>
+
+  </h3>
+  <h3>
+
+  </h3>
+</body>
+
+<script type="text/javascript">
   
-	<body>
-		<h1 id="titre">
-			nani sore
-		</h1>
-		<h2>
-			eehhh boiiii
-		</h2>
-		<h2>
-			zboub
-		</h2>
-		<h3>
-			
-		</h3>  
-		<h3>
-			
-		</h3>
-		<h3>
-			
-		</h3>
-	</body>
+  //window.addEventListener("load", defTitre1());
+  //window.addEventListener("load", defTitre2());
+	window.addEventListener("load", defTitre3());
+
+  function defTitre1() {
+    document.title = document.getElementById("titre").innerHTML;
+  }
+
+  function defTitre2() {
+    document.title = document.getElementsByTagName("h2")[0].innerHTML;
+  }
 	
-	<script type="text/javascript">
-		/*function defTitre1(){
-			document.title = document.getElementById("titre").innerHTML;
-		}*/
-		
-		/*function defTitre2(){
-			document.title = document.getElementsByTagName("h2")[0].innerHTML;
-		}*/
-		
-		function defTitre3(){
+	function defTitre3(){
 			if(document.getElementsByTagName("h2").length != 0){
 				document.title = document.getElementsByTagName("h2")[document.getElementsByTagName("h2").length-1].innerHTML;
 			}
@@ -49,6 +52,6 @@
 				document.title = "PERES Richard - RIGAUT François";
 			}
 		}
-		
-	</script>
+	
+  </script>
 </html>
