@@ -8,30 +8,31 @@
 </head>
 
 <body>
-  <h1 id="titre">
+  <h1 id="titre" class="firstOrLast">
     Salut
   </h1>
-  <h2>
+  <h2 class="firstOrLast">
     h2
   </h2>
-  <h2>
-
+  <h2 class="firstOrLast">
+		2222
   </h2>
-  <h3>
+  <h3 class="firstOrLast">
 
   </h3>
-  <h3>
+  <h3 class="firstOrLast">
 
   </h3>
-  <h3>
-
+  <h3 class="firstOrLast">
+		zzzzz
   </h3>
 </body>
 
 <script type="text/javascript">
   //window.addEventListener("load", defTitre1());
   //window.addEventListener("load", defTitre2());
-  window.addEventListener("load", defTitre3());
+  //window.addEventListener("load", defTitre3());
+	window.addEventListener("load", defTitre4());
 
   function defTitre1() {
     document.title = document.getElementById("titre").innerHTML;
@@ -48,6 +49,17 @@
       document.title = "PERES Richard - RIGAUT François";
     }
   }
+	
+	function defTitre4() {
+		if (document.getElementsByClassName("firstOrLast").length != 0){
+			if(document.getElementsByClassName("firstOrLast").length % 2 == 0){
+				document.title = document.getElementsByClassName("firstOrLast")[0].innerHTML;
+			}
+			else{
+				document.title = document.getElementsByClassName("firstOrLast")[document.getElementsByClassName("firstOrLast").length-1].innerHTML;
+			}
+		}
+	}
 
 </script>
 
