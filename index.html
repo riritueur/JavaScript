@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title> exercice 1 </title>
 
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -12,10 +11,10 @@
   </head>
 	<body onload="defTitre1()">
 		<h1 id="titre">
-			Salut
+			nani sore
 		</h1>
 		<h2>
-			
+			eehhh boiiii
 		</h2>
 		<h2>
 			
@@ -32,8 +31,13 @@
 	</body>
 	
 	<script type="text/javascript">
-		function detTItre1(){
-			window.parent.document.title = document.getElementById("titre");
+		function defTitre1(){
+			document.title = document.getElementById("titre").innerHTML;
 		}
+		
+		/*function defTitre2(){
+			window.parent.document.title = document.getElementsByClassName("h2");
+		}*/
+		
 	</script>
 </html>
