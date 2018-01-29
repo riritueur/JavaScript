@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
   <title> exercice 1 </title>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
 
 </head>
 
@@ -28,9 +29,9 @@
 </body>
 
 <script type="text/javascript">
-  
   //window.addEventListener("load", defTitre1());
-  window.addEventListener("load", defTitre2());
+  //window.addEventListener("load", defTitre2());
+  window.addEventListener("load", defTitre3());
 
   function defTitre1() {
     document.title = document.getElementById("titre").innerHTML;
@@ -39,9 +40,15 @@
   function defTitre2() {
     document.title = document.getElementsByTagName("h2")[0].innerHTML;
   }
-  
-  function defTitr3() {
-    document.title = document.getElementsByTagName("h2")[0].innerHTML;
+
+  function defTitre3() {
+    if (document.getElementsByTagName("h2").length != 0) {
+      document.title = document.getElementsByTagName("h2")[document.getElementsByTagName("h2").length - 1].innerHTML;
+    } else {
+      document.title = "PERES Richard - RIGAUT François";
+    }
   }
-  </script>
+
+</script>
+
 </html>
