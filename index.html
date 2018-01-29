@@ -88,9 +88,37 @@
 				//done = true; //Commenter pour avoir le dernier de la liste, décommenter pour avoir le premier
 			} 
 	 	} 
-		document.getElementById("date_modif").innerHTML = "Dernière modification le " + date.getDate() + "/" + date.getMonth()+1 + "/" + date.getFullYear() + " par " + auteur;
+		document.getElementById("date_modif").innerHTML = "Dernière modification le " + jour(date.getDate()) + "/" + date.getMonth()+1 + "/" + date.getFullYear() + " par " + auteur;
 	}
-
+	
+	function jour( j) {
+    switch (j) {
+        case 1 : 
+            return "Lundi";
+        break;
+        case 2 : 
+            return "Mardi";
+        break;
+        case 3 : 
+            return "Mercredi";  
+        break;
+        case 4 : 
+            return "Jeudi";
+        break;
+        case 5 : 
+            return "Vendredi";
+        break;
+        case 6 : 
+            return "Samedi";
+        break;
+        case 0 : 
+            return "Dimanche";
+        break;
+        default : 
+            return "le jour n'existe pas";
+    }
+}
+	
 </script>
 
 </html>
