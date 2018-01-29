@@ -10,9 +10,9 @@
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
   </head>
-	<body>
+	<body onload="defTitre1()">
 		<h1 id="titre">
-			
+			Salut
 		</h1>
 		<h2>
 			
@@ -32,6 +32,8 @@
 	</body>
 	
 	<script type="text/javascript">
-		
+		function detTItre1(){
+			window.parent.document.title = document.getElementById("titre");
+		}
 	</script>
 </html>
