@@ -4,18 +4,71 @@
 <head>
   <title> exercice 1 </title>
   <meta charset="utf-8">
-
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body id="body">
   <h1 id="titre" class="firstOrLast">
     Salut
   </h1>
+
+  <ul id="menu">
+
+    <li>
+      <a href="#">accueil</a>
+    </li>
+
+    <li>
+      <a href="#">membres</a>
+      <ul>
+        <li><a href="#">connexion</a></li>
+        <li><a href="#">inscription</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#">images</a>
+      <ul>
+        <li>
+          <a href="#">photos</a>
+          <ul>
+            <li><a href="#">catégorie 1</a></li>
+            <li><a href="#">catégorie 2</a></li>
+          </ul>
+
+        </li>
+        <li>
+          <a href="#">vidéos</a>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#">téléchargements</a>
+      <ul>
+        <li><a href="#">vidéos</a></li>
+        <li><a href="#">musiques</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#">plus</a>
+      <ul>
+        <li><a href="#">forum</a></li>
+        <li><a href="#">liens</a></li>
+        <li><a href="#">nous contacter</a></li>
+        <li><a href="#">team</a></li>
+        <li><a href="#">recherche</a></li>
+      </ul>
+    </li>
+
+  </ul>
+
   <h2 class="firstOrLast">
     h2
   </h2>
   <h2 class="firstOrLast">
-		2222
+    2222
   </h2>
   <h3 class="firstOrLast">
 
@@ -24,25 +77,29 @@
 
   </h3>
   <h3 class="firstOrLast">
-		zzzzz
+    zzzzz
   </h3>
-	<div>
-		<p>
-			DEVA VU IVE JUST <span>BEEN IN THIS PLACE </span>BEFORE
-		</p>
-	</div>
-	<div>
-		<p>
-			HIGHER ON THE <span>STREET</span>
-		</p>
-	</div>
+  <button type="button" onclick="inverseTexte()">Swap</button>
+  <div>
+    <p>
+      DEVA VU IVE JUST <span>BEEN IN THIS PLACE </span>BEFORE
+    </p>
+  </div>
+  <div>
+    <p>
+      HIGHER ON THE <span>STREET</span>
+    </p>
+  </div>
+
+  <input type="text" placeholder="input" id="input" oninput="validation()" class="blanc" />
 </body>
+
 
 <script type="text/javascript">
   //window.addEventListener("load", defTitre1());
   //window.addEventListener("load", defTitre2());
   //window.addEventListener("load", defTitre3());
-	window.addEventListener("load", defTitre4());
+  window.addEventListener("load", defTitre4());
 
   function defTitre1() {
     document.title = document.getElementById("titre").innerHTML;
@@ -59,18 +116,43 @@
       document.title = "PERES Richard - RIGAUT François";
     }
   }
-	
-	function defTitre4() {
-		if (document.getElementsByClassName("firstOrLast").length != 0){
-			if(document.getElementsByClassName("firstOrLast").length % 2 == 0){
-				document.title = document.getElementsByClassName("firstOrLast")[0].innerHTML;
-			}
-			else{
-				document.title = document.getElementsByClassName("firstOrLast")[document.getElementsByClassName("firstOrLast").length-1].innerHTML;
-			}
-		}
-	}
 
+  function defTitre4() {
+    if (document.getElementsByClassName("firstOrLast").length != 0) {
+      if (document.getElementsByClassName("firstOrLast").length % 2 == 0) {
+        document.title = document.getElementsByClassName("firstOrLast")[0].innerHTML;
+      } else {
+        document.title = document.getElementsByClassName("firstOrLast")[document.getElementsByClassName("firstOrLast").length - 1].innerHTML;
+      }
+    }
+  }
+
+  function inverseTexte() {
+    if (document.getElementsByTagName("p").length == 2) {
+      var div1 = document.getElementsByTagName("p")[0].innerHTML;
+      var div2 = document.getElementsByTagName("p")[1].innerHTML;
+      document.getElementsByTagName("p")[0].innerHTML = div2;
+      document.getElementsByTagName("p")[1].innerHTML = div1;
+    }
+
+  }
+
+  function validation() {
+    var input = document.getElementById("input")
+    console.log(input.value)
+    if (input.value == "")
+      input.className = "blanc";
+    else {
+      var val = input.value
+      if (!isNaN(val))
+        input.className = "vert";
+      else
+        input.className = "rouge";
+    }
+  }
+
+
+  //document.getElementById("body").innerHTML = '<aside></aside>';
 </script>
 
 </html>
