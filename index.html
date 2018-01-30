@@ -5,6 +5,11 @@
   <title> exercice 1 </title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css" />
+	<meta name="description" content="Free Web tutorials">
+	<meta name="author" content="PERES Richard">
+	<meta name="author" content="RIGAUT François">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+
 </head>
 
 <body id="body">
@@ -92,6 +97,8 @@
   </div>
 
   <input type="text" placeholder="input" id="input" oninput="validation()" class="blanc" />
+	<div id="date_modif"></div>
+	
 </body>
 
 
@@ -99,7 +106,8 @@
   //window.addEventListener("load", defTitre1());
   //window.addEventListener("load", defTitre2());
   //window.addEventListener("load", defTitre3());
-  window.addEventListener("load", defTitre4());
+	window.addEventListener("load", defTitre4());
+	window.addEventListener("load", datemodif());
 
   function defTitre1() {
     document.title = document.getElementById("titre").innerHTML;
@@ -153,6 +161,41 @@
 
 
   //document.getElementById("body").innerHTML = '<aside></aside>';
+
+	
+	function datemodif(){
+		var date = new Date();
+		var metas = document.getElementsByTagName('meta');
+		var done = false;
+		for (var i=0; i<metas.length; i++) { 
+			if (metas[i].getAttribute("name") == "author" && !done) { 
+				var auteur = metas[i].getAttribute("content");
+				//done = true; //Commenter pour avoir le dernier de la liste, décommenter pour avoir le premier
+			} 
+	 	} 
+		document.getElementById("date_modif").innerHTML = "Dernière modification le " + jour(date.getDate()) + "/" + date.getMonth()+1 + "/" + date.getFullYear() + " par " + auteur;
+	}
+	
+	function jour( j) {
+    switch (j) {
+        case 1 : 
+            return "Lundi";
+        break;
+        case 2 : 
+            return "Mardi";
+        break;
+        case 3 : 
+            return "Mercredi";  
+        break;
+        case 4 : 
+            return "Jeudi";
+        break;
+        case 5 : 
+            return "Vendredi";
+        break;
+        case 6 : 
+            return "Samedi";
+        break;
 </script>
 
 </html>
