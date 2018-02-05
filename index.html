@@ -90,16 +90,6 @@
   //window.addEventListener("load", defTitre1());
   //window.addEventListener("load", defTitre2());
   //window.addEventListener("load", defTitre3());
-  <<
-  << << < HEAD
-  window.addEventListener("load", defTitre4());
-  window.addEventListener("load", datemodif());
-  window.addEventListener("load", diffdate());
-  window.addEventListener("load", sethorloge1());
-  window.addEventListener("load", majhorloge1());
-  /*window.addEventListener("load", majhorloge2());*/
-  window.addEventListener("load", majGrafH()); ===
-  === =
   window.addEventListener("load", defTitre4());
   window.addEventListener("load", datemodif());
   window.addEventListener("load", diffdate());
@@ -107,8 +97,7 @@
   window.addEventListener("load", majhorloge1());
   /*window.addEventListener("load", majhorloge2());*/
   window.addEventListener("load", setGrafH());
-  window.addEventListener("load", majGrafH()); >>>
-  >>> > a2cc736b99ae11cf1eef1738b5da0944da94285b
+  window.addEventListener("load", majGrafH());
 
   function defTitre1() {
     document.title = document.getElementById("titre").innerHTML;
@@ -202,19 +191,6 @@
         return "le jour n'existe pas";
     }
   }
-
-  function diffdate() {
-    d1 = new Date();
-    d2 = new Date(2018, 06, 19);
-    var nbjoursmilli = d2.getTime() - d1.getTime();
-    var nbjours = Math.ceil(nbjoursmilli / (1000 * 60 * 60 * 24));
-    if (nbjours == 1 || nbjours == 0) {
-      var stringjour = "jour";
-    } else {
-      var stringjour = "jours";
-    }
-<<<<<<< HEAD
-}
 	
 	function diffdate(){
 		d1 = new Date();
@@ -274,10 +250,6 @@
 	function majGrafH(){
 		window.setInterval(setGrafH, 1000);
 	}
-	
-=======
-    document.getElementById("nbjours").innerHTML = "Il reste " + nbjours + " " + stringjour + " avant le 19 juillet 2018.";
-  }
 
 
   function sethorloge1() {
@@ -321,8 +293,7 @@
   function menu() {
     document.getElementById("it1").innerHTML = "yolal";
   }
-  
->>>>>>> 83d8d110cdcdf0cff5bbdf715b6ce0cb0a30bd08
+	
 </script>
 
 </html>
