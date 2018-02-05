@@ -35,7 +35,7 @@
             <li><a href="#">Sous-item 3</a></li>
           </ul>
         </li>
-        <li><a href="#" id="it3" onfocus="menu()">Item 3</a>
+        <li><a href="#" id="it3" onmouseover="menu()">Item 3</a>
           <ul>
             <li><a href="#">Sous-item 1</a></li>
             <li><a href="#">Sous-item 2</a></li>
@@ -291,6 +291,7 @@
   }
 
   function menu() {
+    alert("menu");
     document.getElementById("it1").innerHTML = "yolal";
   }
 	
