@@ -226,10 +226,10 @@
 		window.setTimeout(sethorloge2,1000);
 	}
 	
-	function format(time){
-		if(time < 10)
-			time = "0"+time;
-		return time;
+	function format(doushite){
+		if(doushite < 10)
+			doushite = "0"+doushite;
+		return doushite;
 	}
 	
 	function setGrafH(){
@@ -250,45 +250,6 @@
 	function majGrafH(){
 		window.setInterval(setGrafH, 1000);
 	}
-
-
-  function sethorloge1() {
-    var d = new Date();
-    document.getElementById("horloge").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-  }
-
-  function sethorloge2() {
-    var d = new Date();
-    document.getElementById("horloge").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-    majhorloge2();
-  }
-
-  function majhorloge1() {
-    window.setInterval(sethorloge1, 1000);
-  }
-
-  function majhorloge2() {
-    window.setTimeout(sethorloge2, 1000);
-  }
-
-  function setGrafH() {
-    var d = new Date();
-    var heure = d.getHours();
-    var heureimg1 = Math.floor(heure / 10);
-    var heureimg2 = heure - heureimg1 * 10;
-    var minute = d.getMinutes();
-    var minuteimg1 = Math.floor(minute / 10);
-    var minuteimg2 = minute - minuteimg1 * 10;
-    var secondes = d.getSeconds();
-    var secondesimg1 = Math.floor(secondes / 10);
-    var secondesimg2 = secondes - secondesimg1 * 10;
-
-    document.getElementById("grafHorloge").innerHTML = "<img src=\"images/" + heureimg1 + ".gif\" />" + "<img src=\"images/" + heureimg2 + ".gif\" />:" + "<img src=\"images/" + minuteimg1 + ".gif\" />" + "<img src=\"images/" + minuteimg2 + ".gif\" />:" + "<img src=\"images/" + secondesimg1 + ".gif\" />" + "<img src=\"images/" + secondesimg2 + ".gif\" />";
-  }
-
-  function majGrafH() {
-    window.setInterval(setGrafH, 1000);
-  }
 
   function menu() {
     alert("menu");
