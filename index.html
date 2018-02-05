@@ -118,6 +118,7 @@
 	window.addEventListener("load", sethorloge1());
 	window.addEventListener("load", majhorloge1());
 	/*window.addEventListener("load", majhorloge2());*/
+	window.addEventListener("load", majGrafH());
 
   function defTitre1() {
     document.title = document.getElementById("titre").innerHTML;
@@ -246,10 +247,24 @@
 		window.setTimeout(sethorloge2,1000);
 	}
 	
+	function setGrafH(){
+		var d = new Date();
+		var heure = d.getHours();
+		var heureimg1 = heure / 10;
+		var heureimg2 = heure - heureimg1;
+		var minute = d.getMinutes();
+		var minuteimg1 = minute / 10;
+		var minuteimg2 = minute - minuteimg1;
+		var secondes = d.getSeconds();
+		var secondesimg1 = secondes / 10;
+		var secondesimg2 = secondes - secondesimg1;
+		
+		document.getElementById("grafHorloge").innerHTML = "<img src=\"images/" + heureimg1 + ".gif\" />";
+		
+	}
+	
 	function majGrafH(){
-		 window.setInterval(function setGrafH(){
-			 var d = new Date();
-		 }, 1000);
+		window.setInterval(setGrafH, 1000);
 	}
 	
 </script>
