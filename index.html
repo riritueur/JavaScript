@@ -101,6 +101,10 @@
 	
 	<p id="nbjours"></p>
 	
+	<p id="horloge"></p>
+	
+	<div id="grafHorloge"></div>
+	
 </body>
 
 
@@ -111,6 +115,9 @@
 	window.addEventListener("load", defTitre4());
 	window.addEventListener("load", datemodif());
 	window.addEventListener("load", diffdate());
+	window.addEventListener("load", sethorloge1());
+	window.addEventListener("load", majhorloge1());
+	/*window.addEventListener("load", majhorloge2());*/
 
   function defTitre1() {
     document.title = document.getElementById("titre").innerHTML;
@@ -217,6 +224,32 @@
 			var stringjour = "jours";
 		}
 		document.getElementById("nbjours").innerHTML = "Il reste " + nbjours + " " + stringjour + " avant le 19 juillet 2018.";
+	}
+	
+	
+	function sethorloge1(){
+		var d = new Date();
+		document.getElementById("horloge").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+	}
+	
+	function sethorloge2(){
+		var d = new Date();
+		document.getElementById("horloge").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+		majhorloge2();
+	}
+	
+	function majhorloge1(){
+		window.setInterval(sethorloge1,1000);
+	}
+	
+	function majhorloge2(){
+		window.setTimeout(sethorloge2,1000);
+	}
+	
+	function majGrafH(){
+		 window.setInterval(function setGrafH(){
+			 var d = new Date();
+		 }, 1000);
 	}
 	
 </script>
