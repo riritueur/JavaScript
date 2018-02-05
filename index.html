@@ -5,10 +5,10 @@
   <title> exercice 1 </title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css" />
-	<meta name="description" content="Free Web tutorials">
-	<meta name="author" content="PERES Richard">
-	<meta name="author" content="RIGAUT François">
-	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="author" content="PERES Richard">
+  <meta name="author" content="RIGAUT François">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
 
 </head>
 
@@ -17,57 +17,35 @@
     Salut
   </h1>
 
-  <ul id="menu">
-
-    <li>
-      <a href="#">accueil</a>
-    </li>
-
-    <li>
-      <a href="#">membres</a>
+  <aside>
+    <div id="menu">
       <ul>
-        <li><a href="#">connexion</a></li>
-        <li><a href="#">inscription</a></li>
-      </ul>
-    </li>
-
-    <li>
-      <a href="#">images</a>
-      <ul>
-        <li>
-          <a href="#">photos</a>
+        <li><a href="#" id="it1">Item 1</a>
           <ul>
-            <li><a href="#">catégorie 1</a></li>
-            <li><a href="#">catégorie 2</a></li>
+            <li><a href="#">Sous-item 1</a></li>
+            <li><a href="#">Sous-item 2</a></li>
+            <li><a href="#">Sous-item 3</a></li>
           </ul>
-
         </li>
-        <li>
-          <a href="#">vidéos</a>
+
+        <li><a href="#" id="it2">Item 2</a>
+          <ul>
+            <li><a href="#">Sous-item 1</a></li>
+            <li><a href="#">Sous-item 2</a></li>
+            <li><a href="#">Sous-item 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#" id="it3" onfocus="menu()">Item 3</a>
+          <ul>
+            <li><a href="#">Sous-item 1</a></li>
+            <li><a href="#">Sous-item 2</a></li>
+            <li><a href="#">Sous-item 3</a></li>
+          </ul>
         </li>
       </ul>
-    </li>
-
-    <li>
-      <a href="#">téléchargements</a>
-      <ul>
-        <li><a href="#">vidéos</a></li>
-        <li><a href="#">musiques</a></li>
-      </ul>
-    </li>
-
-    <li>
-      <a href="#">plus</a>
-      <ul>
-        <li><a href="#">forum</a></li>
-        <li><a href="#">liens</a></li>
-        <li><a href="#">nous contacter</a></li>
-        <li><a href="#">team</a></li>
-        <li><a href="#">recherche</a></li>
-      </ul>
-    </li>
-
-  </ul>
+    </div>
+    <br/>
+  </aside>
 
   <h2 class="firstOrLast">
     h2
@@ -97,14 +75,14 @@
   </div>
 
   <input type="text" placeholder="input" id="input" oninput="validation()" class="blanc" />
-	<div id="date_modif"></div>
-	
-	<p id="nbjours"></p>
-	
-	<p id="horloge"></p>
-	
-	<div id="grafHorloge"></div>
-	
+  <div id="date_modif"></div>
+
+  <p id="nbjours"></p>
+
+  <p id="horloge"></p>
+
+  <div id="grafHorloge"></div>
+
 </body>
 
 
@@ -112,14 +90,25 @@
   //window.addEventListener("load", defTitre1());
   //window.addEventListener("load", defTitre2());
   //window.addEventListener("load", defTitre3());
-	window.addEventListener("load", defTitre4());
-	window.addEventListener("load", datemodif());
-	window.addEventListener("load", diffdate());
-	window.addEventListener("load", sethorloge1());
-	window.addEventListener("load", majhorloge1());
-	/*window.addEventListener("load", majhorloge2());*/
-	window.addEventListener("load", setGrafH());
-	window.addEventListener("load", majGrafH());
+  <<
+  << << < HEAD
+  window.addEventListener("load", defTitre4());
+  window.addEventListener("load", datemodif());
+  window.addEventListener("load", diffdate());
+  window.addEventListener("load", sethorloge1());
+  window.addEventListener("load", majhorloge1());
+  /*window.addEventListener("load", majhorloge2());*/
+  window.addEventListener("load", majGrafH()); ===
+  === =
+  window.addEventListener("load", defTitre4());
+  window.addEventListener("load", datemodif());
+  window.addEventListener("load", diffdate());
+  window.addEventListener("load", sethorloge1());
+  window.addEventListener("load", majhorloge1());
+  /*window.addEventListener("load", majhorloge2());*/
+  window.addEventListener("load", setGrafH());
+  window.addEventListener("load", majGrafH()); >>>
+  >>> > a2cc736b99ae11cf1eef1738b5da0944da94285b
 
   function defTitre1() {
     document.title = document.getElementById("titre").innerHTML;
@@ -148,10 +137,10 @@
   }
 
   function inverseTexte() {
-		var div1 = document.getElementsByTagName("p")[0].innerHTML;
-		var div2 = document.getElementsByTagName("p")[1].innerHTML;
-		document.getElementsByTagName("p")[0].innerHTML = div2;
-		document.getElementsByTagName("p")[1].innerHTML = div1;
+    var div1 = document.getElementsByTagName("p")[0].innerHTML;
+    var div2 = document.getElementsByTagName("p")[1].innerHTML;
+    document.getElementsByTagName("p")[0].innerHTML = div2;
+    document.getElementsByTagName("p")[1].innerHTML = div1;
 
   }
 
@@ -172,46 +161,59 @@
 
   //document.getElementById("body").innerHTML = '<aside></aside>';
 
-	
-	function datemodif(){
-		var date = new Date();
-		var metas = document.getElementsByTagName('meta');
-		var done = false;
-		for (var i=0; i<metas.length; i++) { 
-			if (metas[i].getAttribute("name") == "author" && !done) { 
-				var auteur = metas[i].getAttribute("content");
-				//done = true; //Commenter pour avoir le dernier de la liste, décommenter pour avoir le premier
-			} 
-	 	} 
-		document.getElementById("date_modif").innerHTML = "Dernière modification le " + jour(date.getDate()) + "/" + date.getMonth()+1 + "/" + date.getFullYear() + " par " + auteur;
-	}
-	
-	function jour( j) {
-    switch (j) {
-        case 1 : 
-            return "Lundi";
-        break;
-        case 2 : 
-            return "Mardi";
-        break;
-        case 3 : 
-            return "Mercredi";  
-        break;
-        case 4 : 
-            return "Jeudi";
-        break;
-        case 5 : 
-            return "Vendredi";
-        break;
-        case 6 : 
-            return "Samedi";
-        break;
-        case 0 : 
-            return "Dimanche";
-        break;
-        default : 
-            return "le jour n'existe pas";
+
+  function datemodif() {
+    var date = new Date();
+    var metas = document.getElementsByTagName('meta');
+    var done = false;
+    for (var i = 0; i < metas.length; i++) {
+      if (metas[i].getAttribute("name") == "author" && !done) {
+        var auteur = metas[i].getAttribute("content");
+        //done = true; //Commenter pour avoir le dernier de la liste, décommenter pour avoir le premier
+      }
     }
+    document.getElementById("date_modif").innerHTML = "Dernière modification le " + jour(date.getDate()) + "/" + date.getMonth() + 1 + "/" + date.getFullYear() + " par " + auteur;
+  }
+
+  function jour(j) {
+    switch (j) {
+      case 1:
+        return "Lundi";
+        break;
+      case 2:
+        return "Mardi";
+        break;
+      case 3:
+        return "Mercredi";
+        break;
+      case 4:
+        return "Jeudi";
+        break;
+      case 5:
+        return "Vendredi";
+        break;
+      case 6:
+        return "Samedi";
+        break;
+      case 0:
+        return "Dimanche";
+        break;
+      default:
+        return "le jour n'existe pas";
+    }
+  }
+
+  function diffdate() {
+    d1 = new Date();
+    d2 = new Date(2018, 06, 19);
+    var nbjoursmilli = d2.getTime() - d1.getTime();
+    var nbjours = Math.ceil(nbjoursmilli / (1000 * 60 * 60 * 24));
+    if (nbjours == 1 || nbjours == 0) {
+      var stringjour = "jour";
+    } else {
+      var stringjour = "jours";
+    }
+<<<<<<< HEAD
 }
 	
 	function diffdate(){
@@ -273,6 +275,54 @@
 		window.setInterval(setGrafH, 1000);
 	}
 	
+=======
+    document.getElementById("nbjours").innerHTML = "Il reste " + nbjours + " " + stringjour + " avant le 19 juillet 2018.";
+  }
+
+
+  function sethorloge1() {
+    var d = new Date();
+    document.getElementById("horloge").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+  }
+
+  function sethorloge2() {
+    var d = new Date();
+    document.getElementById("horloge").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+    majhorloge2();
+  }
+
+  function majhorloge1() {
+    window.setInterval(sethorloge1, 1000);
+  }
+
+  function majhorloge2() {
+    window.setTimeout(sethorloge2, 1000);
+  }
+
+  function setGrafH() {
+    var d = new Date();
+    var heure = d.getHours();
+    var heureimg1 = Math.floor(heure / 10);
+    var heureimg2 = heure - heureimg1 * 10;
+    var minute = d.getMinutes();
+    var minuteimg1 = Math.floor(minute / 10);
+    var minuteimg2 = minute - minuteimg1 * 10;
+    var secondes = d.getSeconds();
+    var secondesimg1 = Math.floor(secondes / 10);
+    var secondesimg2 = secondes - secondesimg1 * 10;
+
+    document.getElementById("grafHorloge").innerHTML = "<img src=\"images/" + heureimg1 + ".gif\" />" + "<img src=\"images/" + heureimg2 + ".gif\" />:" + "<img src=\"images/" + minuteimg1 + ".gif\" />" + "<img src=\"images/" + minuteimg2 + ".gif\" />:" + "<img src=\"images/" + secondesimg1 + ".gif\" />" + "<img src=\"images/" + secondesimg2 + ".gif\" />";
+  }
+
+  function majGrafH() {
+    window.setInterval(setGrafH, 1000);
+  }
+
+  function menu() {
+    document.getElementById("it1").innerHTML = "yolal";
+  }
+  
+>>>>>>> 83d8d110cdcdf0cff5bbdf715b6ce0cb0a30bd08
 </script>
 
 </html>
