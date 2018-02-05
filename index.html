@@ -20,22 +20,22 @@
   <aside>
     <div id="menu">
       <ul>
-        <li><a href="#" id="it1">Item 1</a>
-          <ul>
+        <li><a href="#" id="it1" onmouseover="menu1a()" onmouseout="menu1b()">Item 1</a>
+          <ul>  
             <li><a href="#">Sous-item 1</a></li>
             <li><a href="#">Sous-item 2</a></li>
             <li><a href="#">Sous-item 3</a></li>
           </ul>
         </li>
 
-        <li><a href="#" id="it2">Item 2</a>
+        <li><a href="#" id="it2" onmouseover="menu2a()" onmouseout="menu2b()">Item 2</a>
           <ul>
             <li><a href="#">Sous-item 1</a></li>
             <li><a href="#">Sous-item 2</a></li>
             <li><a href="#">Sous-item 3</a></li>
           </ul>
         </li>
-        <li><a href="#" id="it3" onmouseover="menu()">Item 3</a>
+        <li><a href="#" id="it3" onmouseover="menu3a()" onmouseout="menu3b()">Item 3</a>
           <ul>
             <li><a href="#">Sous-item 1</a></li>
             <li><a href="#">Sous-item 2</a></li>
@@ -98,6 +98,9 @@
   /*window.addEventListener("load", majhorloge2());*/
   window.addEventListener("load", setGrafH());
   window.addEventListener("load", majGrafH());
+  window.addEventListener("load", menu1b());
+  window.addEventListener("load", menu2b());
+  window.addEventListener("load", menu3b());
 
   function defTitre1() {
     document.title = document.getElementById("titre").innerHTML;
@@ -244,11 +247,36 @@
     window.setInterval(setGrafH, 1000);
   }
 
-  function menu() {
-    alert("menu");
-    document.getElementById("it1").innerHTML = "yolal";
+  function menu1a() {
+    var item = document.getElementById("it1");
+    item.innerHTML = "<img src=\"images/plus.gif\"/>" + "  Item 1";
   }
   
+  function menu1b() {
+    var item = document.getElementById("it1");
+    item.innerHTML = "<img src=\"images/minus.gif\"/>" + "  Item 1";
+  }
+  
+  
+  function menu2a() {
+    var item = document.getElementById("it2");
+    item.innerHTML = "<img src=\"images/plus.gif\"/>" + "  Item 2";
+  }
+  
+  function menu2b() {
+    var item = document.getElementById("it2");
+    item.innerHTML = "<img src=\"images/minus.gif\"/>" + "  Item 2";
+  }
+  
+  function menu3a() {
+    var item = document.getElementById("it3");
+    item.innerHTML = "<img src=\"images/plus.gif\"/>" + "  Item 3";
+  }
+  
+  function menu3b() {
+    var item = document.getElementById("it3");
+    item.innerHTML = "<img src=\"images/minus.gif\"/>" + "  Item 3";
+  }
 </script>
 
 </html>
