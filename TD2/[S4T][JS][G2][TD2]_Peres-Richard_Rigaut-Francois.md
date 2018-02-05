@@ -10,10 +10,20 @@ Le script JS de l'exercice est disponible [ici](scripts.js)
 
 ## 4) Exercice 1
 
-### 4.1/ La propriété document.title
+### 4.1/ Sélection d'un objet
 
-1.  Quel sera l’évènement qui déclenchera l’appelle de votre fonction ?
+1.  Comment avez-vous ajouté l’écouteur d’évènement et sur quel objet ?
 
-    window.addEventListener("load", fonction());
-    window.onload = fonction();
-    `<body onload=”fonction()”>`
+    ss
+    
+    
+    
+1.  Que se passe-t-il si vous utilisez currentTarget en lieu et place de target ?
+
+    ss
+    
+      
+    
+1.  Comment avez-vous ajouté l’écouteur d’évènement et sur quel objet ?
+
+    ss
