@@ -10,6 +10,10 @@
   background-color: rgb(255, 150, 150);
 }
 
+.select {
+  background-color: rgb(255, 255, 120);
+}
+
 #menu ul {
   margin: 0;
   padding: 0;

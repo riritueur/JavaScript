@@ -21,7 +21,7 @@
     <div id="menu">
       <ul>
         <li><a href="#" id="it1" onmouseover="menu1a()" onmouseout="menu1b()">Item 1</a>
-          <ul>  
+          <ul>
             <li><a href="#">Sous-item 1</a></li>
             <li><a href="#">Sous-item 2</a></li>
             <li><a href="#">Sous-item 3</a></li>
@@ -73,7 +73,6 @@
       HIGHER ON THE <span>STREET</span>
     </p>
   </div>
-
   <input type="text" placeholder="input" id="input" oninput="validation()" class="blanc" />
   <div id="date_modif"></div>
 
@@ -82,6 +81,9 @@
   <p id="horloge"></p>
 
   <div id="grafHorloge"></div>
+
+  <input type="text" placeholder="votre mot" id="rechercher" />
+  <button type="button" onclick="recherche()">Rechercher</button>
 
 </body>
 
@@ -101,6 +103,29 @@
   window.addEventListener("load", menu1b());
   window.addEventListener("load", menu2b());
   window.addEventListener("load", menu3b());
+  window.addEventListener("load", recherche());
+
+
+  var page;
+
+
+  function recherche() {
+    var mot = document.getElementById("rechercher").value;
+    if (mot != "") {
+      if (page == null)
+        page = document.getElementsByTagName("body")[0];
+
+      for (var i = 0; i < page.childElementCount; i++) {
+        console.log(page.childNodes[i].innerHTML + "(" + i + ")")
+        if (page.childNodes[i].innerText == mot) {
+           //alert(page.childNodes[i].innerHTML + " id = " + i)
+          page.childNodes[i].innerHTML = "<span class=\"select\">"+mot+"</span>";
+        }
+      }
+    }
+
+  }
+
 
   function defTitre1() {
     document.title = document.getElementById("titre").innerHTML;
@@ -194,97 +219,95 @@
         return "le jour n'existe pas";
     }
   }
-	
-	function diffdate(){
-		d1 = new Date();
-		d2 = new Date(2018,06,19);
-		var nbjoursmilli = d2.getTime() - d1.getTime();
-		var nbjours = Math.ceil(nbjoursmilli/(1000*60*60*24));
-		if(nbjours == 1 || nbjours == 0){
-			var stringjour = "jour";
-		}
-		else{
-			var stringjour = "jours";
-		}
-		document.getElementById("nbjours").innerHTML = "Il reste " + nbjours + " " + stringjour + " avant le 19 juillet 2018.";
-	}
-	
-	
-	function sethorloge1(){
-		var d = new Date();
-		document.getElementById("horloge").innerHTML = format(d.getHours()) + ":" + format(d.getMinutes()) + ":" + format(d.getSeconds());
-	}
-	
-	function sethorloge2(){
-		var d = new Date();
-		document.getElementById("horloge").innerHTML = format(d.getHours()) + ":" + format(d.getMinutes()) + ":" + format(d.getSeconds());
-		majhorloge2();
-	}
-	
-	function majhorloge1(){
-		window.setInterval(sethorloge1,1000);
-	}
-	
-	function majhorloge2(){
-		window.setTimeout(sethorloge2,1000);
-	}
-	
-	function format(doushite){
-		if(doushite < 10)
-			doushite = "0"+doushite;
-		return doushite;
-	}
-	
-	function setGrafH(){
-		var d = new Date();
-		var heure = d.getHours();
-		var heureimg1 = Math.floor(heure / 10);
-		var heureimg2 = heure - heureimg1*10;
-		var minute = d.getMinutes();
-		var minuteimg1 = Math.floor(minute / 10);
-		var minuteimg2 = minute - minuteimg1*10;
-		var secondes = d.getSeconds();
-		var secondesimg1 = Math.floor(secondes / 10);
-		var secondesimg2 = secondes - secondesimg1*10;
-		
-		document.getElementById("grafHorloge").innerHTML = "<img src=\"images/" + heureimg1 + ".gif\" />" + "<img src=\"images/" + heureimg2 + ".gif\" />:" + "<img src=\"images/" + minuteimg1 + ".gif\" />" + "<img src=\"images/" + minuteimg2 + ".gif\" />:" + "<img src=\"images/" + secondesimg1 + ".gif\" />" + "<img src=\"images/" + secondesimg2 + ".gif\" />";
-	}
-	
-	function majGrafH(){
-		window.setInterval(setGrafH, 1000);
-	}
+
+  function diffdate() {
+    d1 = new Date();
+    d2 = new Date(2018, 06, 19);
+    var nbjoursmilli = d2.getTime() - d1.getTime();
+    var nbjours = Math.ceil(nbjoursmilli / (1000 * 60 * 60 * 24));
+    if (nbjours == 1 || nbjours == 0) {
+      var stringjour = "jour";
+    } else {
+      var stringjour = "jours";
+    }
+    document.getElementById("nbjours").innerHTML = "Il reste " + nbjours + " " + stringjour + " avant le 19 juillet 2018.";
+  }
+
+
+  function sethorloge1() {
+    var d = new Date();
+    document.getElementById("horloge").innerHTML = format(d.getHours()) + ":" + format(d.getMinutes()) + ":" + format(d.getSeconds());
+  }
+
+  function sethorloge2() {
+    var d = new Date();
+    document.getElementById("horloge").innerHTML = format(d.getHours()) + ":" + format(d.getMinutes()) + ":" + format(d.getSeconds());
+    majhorloge2();
+  }
+
+  function majhorloge1() {
+    window.setInterval(sethorloge1, 1000);
+  }
+
+  function majhorloge2() {
+    window.setTimeout(sethorloge2, 1000);
+  }
+
+  function format(doushite) {
+    if (doushite < 10)
+      doushite = "0" + doushite;
+    return doushite;
+  }
+
+  function setGrafH() {
+    var d = new Date();
+    var heure = d.getHours();
+    var heureimg1 = Math.floor(heure / 10);
+    var heureimg2 = heure - heureimg1 * 10;
+    var minute = d.getMinutes();
+    var minuteimg1 = Math.floor(minute / 10);
+    var minuteimg2 = minute - minuteimg1 * 10;
+    var secondes = d.getSeconds();
+    var secondesimg1 = Math.floor(secondes / 10);
+    var secondesimg2 = secondes - secondesimg1 * 10;
+
+    document.getElementById("grafHorloge").innerHTML = "<img src=\"images/" + heureimg1 + ".gif\" />" + "<img src=\"images/" + heureimg2 + ".gif\" />:" + "<img src=\"images/" + minuteimg1 + ".gif\" />" + "<img src=\"images/" + minuteimg2 + ".gif\" />:" + "<img src=\"images/" + secondesimg1 + ".gif\" />" + "<img src=\"images/" + secondesimg2 + ".gif\" />";
+  }
+
+  function majGrafH() {
+    window.setInterval(setGrafH, 1000);
+  }
 
   function menu1a() {
     var item = document.getElementById("it1");
     item.innerHTML = "<img src=\"images/plus.gif\"/>" + "  Item 1";
   }
-  
+
   function menu1b() {
     var item = document.getElementById("it1");
     item.innerHTML = "<img src=\"images/minus.gif\"/>" + "  Item 1";
   }
-  
-  
+
+
   function menu2a() {
     var item = document.getElementById("it2");
     item.innerHTML = "<img src=\"images/plus.gif\"/>" + "  Item 2";
   }
-  
+
   function menu2b() {
     var item = document.getElementById("it2");
     item.innerHTML = "<img src=\"images/minus.gif\"/>" + "  Item 2";
   }
-  
+
   function menu3a() {
     var item = document.getElementById("it3");
     item.innerHTML = "<img src=\"images/plus.gif\"/>" + "  Item 3";
   }
-  
+
   function menu3b() {
     var item = document.getElementById("it3");
     item.innerHTML = "<img src=\"images/minus.gif\"/>" + "  Item 3";
   }
-
 </script>
 
 </html>
