@@ -46,12 +46,12 @@ La page HTML de l'exercice est disponible [ici](index.html)
 
 7.  Quant est-il avec Internet Explorer ?
 
-    Il quant est que ça marche comme même
+    Cela fonctionne aussi.
 
 
 8.  Comment avez-vous déterminé si un nombre est pair ?
 
-    Avec modulo 2
+    Avec modulo 2 (%2 == 0 pour pair, %2 == 1 pour impair).
     
     
 
@@ -65,7 +65,7 @@ La page HTML de l'exercice est disponible [ici](index.html)
     * outerText: Prend le texte externe à la balise 
     * textContent: Prend le contenu brut du texte
     
-2.    Y a-t-il une différence avec Internet Explore, FireFox et d’autres navigateurs à votre disposition concernant ces propriétés ?
+2.    Y a-t-il une différence avec Internet Explorer, FireFox et d’autres navigateurs à votre disposition concernant ces propriétés ?
 
     Non
     
@@ -86,12 +86,12 @@ La page HTML de l'exercice est disponible [ici](index.html)
 
 1.  Comment obtenez-vous le nombre de jours ?
 
-    z
+    Pour obtenir le nombre de jours, on passe par les dates en millisecondes pour faire la différence entre la date d'aujourd'hui et le 19 juillet 2018, puis on transforme les millisecondes en jours.
 
 
 2.  Comment faites-vous la mise à jour du texte ?
 
-    z
+    On fait la mise à jour du texte avec un innerHTML = [...]
     
     
 
@@ -99,7 +99,7 @@ La page HTML de l'exercice est disponible [ici](index.html)
 
 1.  Laquelle des deux méthodes de window avez-vous utilisé ? Pourquoi ?
     
-    z
+    setInterval, car elle est beaucoup plus simple à utiliser et appeler une fonction en boucle est son rôle principal, contrairement à setTimeout qui ne sert qu'à appeler une fonction une seule fois.
     
 
 
@@ -114,7 +114,7 @@ La page HTML de l'exercice est disponible [ici](index.html)
 
 1.  Quel évènement avez-vous utilisé ?
 
-    oninput()
+    Nous avons utilisé l'événement oninput().
     
 
 2.  Comment avez-vous fait changer la couleur du champ texte ?

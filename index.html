@@ -231,12 +231,12 @@
 	
 	function sethorloge1(){
 		var d = new Date();
-		document.getElementById("horloge").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+		document.getElementById("horloge").innerHTML = format(d.getHours()) + ":" + format(d.getMinutes()) + ":" + format(d.getSeconds());
 	}
 	
 	function sethorloge2(){
 		var d = new Date();
-		document.getElementById("horloge").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+		document.getElementById("horloge").innerHTML = format(d.getHours()) + ":" + format(d.getMinutes()) + ":" + format(d.getSeconds());
 		majhorloge2();
 	}
 	
@@ -246,6 +246,12 @@
 	
 	function majhorloge2(){
 		window.setTimeout(sethorloge2,1000);
+	}
+	
+	function format(time){
+		if(time < 10)
+			time = "0"+time;
+		return time;
 	}
 	
 	function setGrafH(){
