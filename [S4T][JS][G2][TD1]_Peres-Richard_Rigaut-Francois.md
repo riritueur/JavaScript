@@ -123,14 +123,14 @@ La page HTML de l'exercice est disponible [ici](index.html)
 
 2.  Comment avez-vous fait changer la couleur du champ texte ?
 
-    		`[...].className = " ... ";`
+	`[...].className = " ... ";`
     
     
     
 ### 8.2/ Menu déroulant
 
 
-    		Aucune question demandé
+   	Aucune question demandé
     
     
 ----------
@@ -140,4 +140,4 @@ La page HTML de l'exercice est disponible [ici](index.html)
 ## 9) Exercice 4 :
 
 
-   		 Aucune question demandé
+   	Aucune question demandé
