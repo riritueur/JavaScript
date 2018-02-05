@@ -1,94 +1,6 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-  <title> exercice 1 </title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Free Web tutorials">
-  <meta name="author" content="PERES Richard">
-  <meta name="author" content="RIGAUT François">
-  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-
-</head>
-
-<body id="body">
-  <h1 id="titre" class="firstOrLast">
-    Salut
-  </h1>
-
-  <aside>
-    <div id="menu">
-      <ul>
-        <li><a href="#" id="it1" onmouseover="menu1a()" onmouseout="menu1b()">Item 1</a>
-          <ul>
-            <li><a href="#">Sous-item 1</a></li>
-            <li><a href="#">Sous-item 2</a></li>
-            <li><a href="#">Sous-item 3</a></li>
-          </ul>
-        </li>
-
-        <li><a href="#" id="it2" onmouseover="menu2a()" onmouseout="menu2b()">Item 2</a>
-          <ul>
-            <li><a href="#">Sous-item 1</a></li>
-            <li><a href="#">Sous-item 2</a></li>
-            <li><a href="#">Sous-item 3</a></li>
-          </ul>
-        </li>
-        <li><a href="#" id="it3" onmouseover="menu3a()" onmouseout="menu3b()">Item 3</a>
-          <ul>
-            <li><a href="#">Sous-item 1</a></li>
-            <li><a href="#">Sous-item 2</a></li>
-            <li><a href="#">Sous-item 3</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <br/>
-  </aside>
-
-  <h2 class="firstOrLast">
-    h2
-  </h2>
-  <h2 class="firstOrLast">
-    2222
-  </h2>
-  <h3 class="firstOrLast">
-
-  </h3>
-  <h3 class="firstOrLast">
-
-  </h3>
-  <h3 class="firstOrLast">
-    zzzzz
-  </h3>
-  <button type="button" onclick="inverseTexte()">Swap</button>
-  <div>
-    <p>
-      DEVA VU IVE JUST <span>BEEN IN THIS PLACE </span>BEFORE
-    </p>
-  </div>
-  <div>
-    <p>
-      HIGHER ON THE <span>STREET</span>
-    </p>
-  </div>
-  <input type="text" placeholder="input" id="input" oninput="validation()" class="blanc" />
-  <div id="date_modif"></div>
-
-  <p id="nbjours"></p>
-
-  <p id="horloge"></p>
-
-  <div id="grafHorloge"></div>
-
-  <input type="text" placeholder="votre mot" id="rechercher" />
-  <button type="button" onclick="recherche()">Rechercher</button>
-
-</body>
-
-
-<script type="text/javascript">
+  
+  
   //window.addEventListener("load", defTitre1());
   //window.addEventListener("load", defTitre2());
   //window.addEventListener("load", defTitre3());
@@ -174,10 +86,6 @@
         input.className = "rouge";
     }
   }
-
-
-  //document.getElementById("body").innerHTML = '<aside></aside>';
-
 
   function datemodif() {
     var date = new Date();
@@ -278,6 +186,7 @@
     window.setInterval(setGrafH, 1000);
   }
 
+  
   function menu1a() {
     var item = document.getElementById("it1");
     item.innerHTML = "<img src=\"images/plus.gif\"/>" + "  Item 1";
@@ -288,7 +197,7 @@
     item.innerHTML = "<img src=\"images/minus.gif\"/>" + "  Item 1";
   }
 
-
+  
   function menu2a() {
     var item = document.getElementById("it2");
     item.innerHTML = "<img src=\"images/plus.gif\"/>" + "  Item 2";
@@ -299,6 +208,7 @@
     item.innerHTML = "<img src=\"images/minus.gif\"/>" + "  Item 2";
   }
 
+  
   function menu3a() {
     var item = document.getElementById("it3");
     item.innerHTML = "<img src=\"images/plus.gif\"/>" + "  Item 3";
@@ -308,6 +218,4 @@
     var item = document.getElementById("it3");
     item.innerHTML = "<img src=\"images/minus.gif\"/>" + "  Item 3";
   }
-</script>
-
-</html>
+  
