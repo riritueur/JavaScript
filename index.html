@@ -99,6 +99,8 @@
   <input type="text" placeholder="input" id="input" oninput="validation()" class="blanc" />
 	<div id="date_modif"></div>
 	
+	<p id="nbjours"></p>
+	
 </body>
 
 
@@ -108,6 +110,7 @@
   //window.addEventListener("load", defTitre3());
 	window.addEventListener("load", defTitre4());
 	window.addEventListener("load", datemodif());
+	window.addEventListener("load", diffdate());
 
   function defTitre1() {
     document.title = document.getElementById("titre").innerHTML;
@@ -136,12 +139,10 @@
   }
 
   function inverseTexte() {
-    if (document.getElementsByTagName("p").length == 2) {
-      var div1 = document.getElementsByTagName("p")[0].innerHTML;
-      var div2 = document.getElementsByTagName("p")[1].innerHTML;
-      document.getElementsByTagName("p")[0].innerHTML = div2;
-      document.getElementsByTagName("p")[1].innerHTML = div1;
-    }
+		var div1 = document.getElementsByTagName("p")[0].innerHTML;
+		var div2 = document.getElementsByTagName("p")[1].innerHTML;
+		document.getElementsByTagName("p")[0].innerHTML = div2;
+		document.getElementsByTagName("p")[1].innerHTML = div1;
 
   }
 
@@ -203,6 +204,20 @@
             return "le jour n'existe pas";
     }
 }
+	
+	function diffdate(){
+		d1 = new Date();
+		d2 = new Date(2018,06,19);
+		var nbjoursmilli = d2.getTime() - d1.getTime();
+		var nbjours = Math.ceil(nbjoursmilli/(1000*60*60*24));
+		if(nbjours == 1 || nbjours == 0){
+			var stringjour = "jour";
+		}
+		else{
+			var stringjour = "jours";
+		}
+		document.getElementById("nbjours").innerHTML = "Il reste " + nbjours + " " + stringjour + " avant le 19 juillet 2018.";
+	}
 	
 </script>
 
