@@ -35,7 +35,7 @@
             <li><a href="#">Sous-item 3</a></li>
           </ul>
         </li>
-        <li><a href="#" id="it3" onfocus="menu()">Item 3</a>
+        <li><a href="#" id="it3" onmouseover="menu()">Item 3</a>
           <ul>
             <li><a href="#">Sous-item 1</a></li>
             <li><a href="#">Sous-item 2</a></li>
@@ -90,16 +90,6 @@
   //window.addEventListener("load", defTitre1());
   //window.addEventListener("load", defTitre2());
   //window.addEventListener("load", defTitre3());
-  <<
-  << << < HEAD
-  window.addEventListener("load", defTitre4());
-  window.addEventListener("load", datemodif());
-  window.addEventListener("load", diffdate());
-  window.addEventListener("load", sethorloge1());
-  window.addEventListener("load", majhorloge1());
-  /*window.addEventListener("load", majhorloge2());*/
-  window.addEventListener("load", majGrafH()); ===
-  === =
   window.addEventListener("load", defTitre4());
   window.addEventListener("load", datemodif());
   window.addEventListener("load", diffdate());
@@ -107,8 +97,7 @@
   window.addEventListener("load", majhorloge1());
   /*window.addEventListener("load", majhorloge2());*/
   window.addEventListener("load", setGrafH());
-  window.addEventListener("load", majGrafH()); >>>
-  >>> > a2cc736b99ae11cf1eef1738b5da0944da94285b
+  window.addEventListener("load", majGrafH());
 
   function defTitre1() {
     document.title = document.getElementById("titre").innerHTML;
@@ -256,6 +245,7 @@
   }
 
   function menu() {
+    alert("menu");
     document.getElementById("it1").innerHTML = "yolal";
   }
   
