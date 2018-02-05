@@ -16,8 +16,51 @@
 
 </body>
 
+<h1 id="titre"> TD2 </h1>
 
-<script type="text/javascript" src="scripts.js">
+<h2>Balise h2</h2>
+
+<h2>Balise h2.2</h2>
+
+<div>
+  bonjour
+</div>
+
+<div>
+  ola
+</div>
+
+<div>
+  konichiwa
+</div>
+
+<ul class="violet">
+ Conversation :
+  <li class="rose">hey</li>
+  <li class="rose">salut</li>
+  <li class="rose">cava</li>
+</ul>
+
+<span id="sp"> span </span>
+
+<!-- <script type="text/javascript" src="scripts.js"> -->
+<script type="text/javascript">
+  
+  window.addEventListener("load", init())
+  
+  function init(){
+    
+    document.getElementById("titre").setAttribute("style", "background-color:black;color:white");
+    
+    document.getElementById("sp").setAttribute("style", "background-color:red");
+    
+    for(var i=0; i< document.getElementsByTagName("h2").length; i++)
+      document.getElementsByTagName("h2")[i].setAttribute("style", "background-color:blue");
+    
+    for(var i=0; i< document.getElementsByTagName("div").length; i++)
+      document.getElementsByTagName("div")[i].setAttribute("style", "background-color:green");
+  }
+  
 </script>
 
 </html>
