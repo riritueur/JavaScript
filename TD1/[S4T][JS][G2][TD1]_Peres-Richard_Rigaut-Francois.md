@@ -2,6 +2,7 @@
 
 
 La page HTML de l'exercice est disponible [ici](index.html)
+Le script JS de l'exercice est disponible [ici](scripts.js)
 
 
 ------------
