@@ -35,7 +35,7 @@
 </div>
 
 <ul class="violet">
- Conversation :
+  Conversation :
   <li class="rose">hey</li>
   <li class="rose">salut</li>
   <li class="rose">cava</li>
@@ -43,31 +43,37 @@
 
 <span id="sp"> span </span>
 
+<div id="frameInsert">
+  <input type="button" value="DIV" onclick="insertB('div')" />
+  <input type="button" value="P" onclick="insertB('p')" />
+  <input type="button" value="H2" onclick="insertB('h2')" />
+  <input type="text" id="toInsert" />
+</div>
+
 <!-- <script type="text/javascript" src="scripts.js"> -->
 <script type="text/javascript">
-  
   window.addEventListener("load", init())
-  
-  function init(){
-    
+
+  function init() {
+
     document.getElementById("titre").setAttribute("style", "background-color:black;color:white");
-    
+
     document.getElementById("sp").setAttribute("style", "background-color:red");
-    
-    for(var i=0; i< document.getElementsByTagName("h2").length; i++)
+
+    for (var i = 0; i < document.getElementsByTagName("h2").length; i++)
       document.getElementsByTagName("h2")[i].setAttribute("style", "background-color:blue");
-    
-    for(var i=0; i< document.getElementsByTagName("div").length; i++)
+
+    for (var i = 0; i < document.getElementsByTagName("div").length; i++)
       document.getElementsByTagName("div")[i].setAttribute("style", "background-color:green");
-		
-		for(var i=0; i< document.childNodes.length; i++)
-			document.childNodes[i].addEventListener('click',select,false);
+
+    for (var i = 0; i < document.childNodes.length; i++)
+      document.childNodes[i].addEventListener('click', select, false);
   }
-	
-	function select(e){
-		e.target.style.backgroundColor = "red";
-	}
-  
+
+  function select(e) {
+    e.target.style.backgroundColor = "red";
+  }
+
 </script>
 
 </html>
