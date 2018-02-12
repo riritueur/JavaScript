@@ -65,7 +65,18 @@
   }
 	
 	function select(e){
-		e.target.style.backgroundColor = "red";
+		if(e.target.attributes.getNamedItem("clr") == undefined ){
+			var clr = document.createAttribute("clr");
+			clr.value = e.target.style.backgroundColor;
+			e.target.attributes.setNamedItem(clr);
+			e.target.style.backgroundColor = "red";
+		}
+		else{
+			e.target.style.backgroundColor = e.target.attributes.getNamedItem("clr").nodeValue;
+			e.target.attributes.removeNamedItem("clr");
+			
+		}
+		
 	}
   
 </script>
