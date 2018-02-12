@@ -54,6 +54,8 @@
 <script type="text/javascript">
   window.addEventListener("load", init())
 
+	var elemSelected = false;
+	
   function init() {
 
     document.getElementById("titre").setAttribute("style", "background-color:black;color:white");
@@ -67,10 +69,10 @@
       document.getElementsByTagName("div")[i].setAttribute("style", "background-color:green");
 
     for (var i = 0; i < document.childNodes.length; i++)
-      document.childNodes[i].addEventListener('click', select, false);
+      document.childNodes[i].addEventListener('click', select2, false);
   }
 	
-	function select(e){
+	/*function select(e){
 		if(e.target.attributes.getNamedItem("clr") == undefined){
 			var clr = document.createAttribute("clr");
 			clr.value = e.target.style.backgroundColor;
@@ -80,6 +82,23 @@
 		else{
 			e.target.style.backgroundColor = e.target.attributes.getNamedItem("clr").nodeValue;
 			e.target.attributes.removeNamedItem("clr");
+		}
+	}*/
+	
+	function select2(e){
+		if(!elemSelected || e.target.attributes.getNamedItem("clr") != undefined){
+			if(e.target.attributes.getNamedItem("clr") == undefined){
+				var clr = document.createAttribute("clr");
+				clr.value = e.target.style.backgroundColor;
+				e.target.attributes.setNamedItem(clr);
+				e.target.style.backgroundColor = "blue";
+				elemSelected = true;
+			}
+			else{
+				e.target.style.backgroundColor = e.target.attributes.getNamedItem("clr").nodeValue;
+				e.target.attributes.removeNamedItem("clr");
+				elemSelected = false;
+			}
 		}
 	}
 	
