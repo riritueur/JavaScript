@@ -60,14 +60,17 @@
 
     document.getElementById("titre").setAttribute("style", "background-color:black;color:white");
 
-    document.getElementById("sp").setAttribute("style", "background-color:red");
+    document.getElementById("sp").setAttribute("style", "background-color:yellow");
 
     for (var i = 0; i < document.getElementsByTagName("h2").length; i++)
-      document.getElementsByTagName("h2")[i].setAttribute("style", "background-color:blue");
+      document.getElementsByTagName("h2")[i].setAttribute("style", "background-color:lightBlue");
 
     for (var i = 0; i < document.getElementsByTagName("div").length; i++)
       document.getElementsByTagName("div")[i].setAttribute("style", "background-color:green");
 
+		/*for (var i = 0; i < document.childNodes.length; i++)
+      document.childNodes[i].addEventListener('click', select, false);*/
+		
     for (var i = 0; i < document.childNodes.length; i++)
       document.childNodes[i].addEventListener('click', select2, false);
   }
@@ -86,7 +89,7 @@
 	}*/
 	
 	function select2(e){
-		if(!elemSelected || e.target.attributes.getNamedItem("clr") != undefined){
+		if((!elemSelected || e.target.attributes.getNamedItem("clr") != undefined ) && e.target.parentElement.getAttribute("id") != "frameInsert" && e.target.getAttribute("id") != "frameInsert"){
 			if(e.target.attributes.getNamedItem("clr") == undefined){
 				var clr = document.createAttribute("clr");
 				clr.value = e.target.style.backgroundColor;
