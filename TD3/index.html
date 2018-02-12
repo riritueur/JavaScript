@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>Jeu de taquin</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body onload="init()">
+  <div id="jeu">
+    <div style="top:0px;left:0px;" class="case">
+      <h1>6</h1>
+    </div>
+    <div style="top:0px;left:102px;" class="case">
+      <h1>1</h1>
+    </div>
+    <div style="top:0px;left:204px;" class="case">
+      <h1>7</h1>
+    </div>
+    <div style="top:102px;left:0px;" class="case">
+      <h1>3</h1>
+    </div>
+    <div style="top:102px;left:102px;" class="case">
+      <h1>4</h1>
+    </div>
+    <div style="top:102px;left:204px;" class="case">
+      <h1>8</h1>
+    </div>
+    <div style="top:204px;left:0px;" class="case">
+      <h1>5</h1>
+    </div>
+    <div style="top:204px;left:102px;" class="case">
+      <h1>2</h1>
+    </div>
+    <div style="top:204px;left:204px;" class="case vide">
+      <h1> </h1>
+    </div>
+  </div>
+</body>
+
+<!-- <script type="text/javascript" src="scripts.js"> -->
+<script type="text/javascript">
+  
+  window.addEventListener("load", init())
+
+  function init() {
+    
+    for (var i = 0; i < document.body.childNodes.length; i++) {
+      console.log("elem = " + document.body.childNodes[i].tagName + " et " + document.childNodes[i].className)
+//      if (document.childNodes[i].className == "case" && document.childNodes[i].tagName == "DIV")
+//        console.log("e")
+//        document.childNodes[i].addEventListener('click', ff, false);
+    }
+  }
+
+</script>
+
+</html>
