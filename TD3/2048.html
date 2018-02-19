@@ -36,43 +36,87 @@
   
    <script type="text/javascript">
      
-		 class maCase{
+		 class MaCase{
 			 constructor(valeur,nouvelle){
 				 this.valeur = valeur;
 				 this.nouvelle = nouvelle;
 			 }
 		 }
 		 
+		 class Coordonnees{
+			 constructor(abs,ord){
+				 this.abs = abs;
+				 this.ord = ord;
+			 }
+		 }
+		 
     function init(){
-      var grille = new Array(Array(maCase));
+      var grille = new Array(Array(MaCase));
 			for(var i = 0; i < 4; i++){
 				var ligne = Array();
 				for(var j = 0; j < 4; j++){
-					ligne[j] = new maCase("",false);
+					ligne[j] = new MaCase("",false);
 				}
 				grille[i] = ligne;
 			}
 			
-			window.addEventListener("onkeypress",actionClavier,false);
+			window.addEventListener("onkeydown",actionClavier,false);
 			
-			var ord1 = Math.floor(Math.random() * 4);
-			var ord2 = Math.floor(Math.random() * 4);
-			var abs1 = Math.floor(Math.random() * 4);
-			var abs2 = Math.floor(Math.random() * 4);
+			insertionValeur(obtenirNouvelleValeur(), obtenirCaseVide(grille), grille);
+			insertionValeur(obtenirNouvelleValeur(), obtenirCaseVide(grille), grille);
 			
-			grille[abs1][ord1].valeur = 2;
-			grille[abs2][ord2].valeur = 2;
-			
-			afficherGrille();
+			afficherGrille(grille);
 			
     }
+		 
+		 function insertionValeur(valeur, coordonnee, grille){
+			 grille[coordonnee.abs][coordonnee.ord].valeur = valeur;
+		 }
+		 
+		 function obtenirNouvelleValeur(){
+			 var rand = Math.floor(Math.random()*10);
+			 if(rand == 0)
+				 return 4;
+			 else return 2;
+		 }
+		 
+		 function obtenirCaseVide(grille){
+			 if(existsCaseVide(grille)){
+				 var found = false;
+				 while(!found){
+					 var i = Math.floor(Math.random()*4);
+					 var j = Math.floor(Math.random()*4);
+					 if(grille[i][j].valeur == ""){
+						 found = true;
+						 return new Coordonnees(i,j);
+					 }
+				 }
+			 }
+		 }
+		 
+		 function existsCaseVide(grille){
+			 var res = false;
+			 grille.forEach(function(elem){
+				 elem.forEach(function(elem2){
+					 if(elem2.valeur == ""){
+						 res = true;
+					 }
+				 });
+			 });
+			 return res;
+		 }
 		 
 		 function actionClavier(){
 			 
 		 }
 		 
-		 function afficherGrille(){
-			 
+		 function afficherGrille(grille){
+			 var elements = document.body.querySelectorAll(".case");
+			 for(var i = 0; i < 4; i++){
+				 for(var j = 0; j < 4; j++){
+					 elements[i*4+j].innerHTML = "<h1>" + grille[i][j].valeur + "</h1>";
+				 }
+			 }
 		 }
      
   </script>
