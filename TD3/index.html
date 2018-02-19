@@ -47,12 +47,56 @@
     var elements = document.querySelectorAll(".case");
 		elements.forEach(function(elem){
 			elem.addEventListener('click', select, false);
-			console.log(elem.innerHTML);
+			//console.log(elem.outerHTML);
 		});
   }
 	
 	function select(){
-		
+      
+		var posX = this.style.left
+		var posY = this.style.top
+        
+        posX = posX.substring(0, posX.length-2)
+        posY = posY.substring(0, posY.length-2)
+      
+        posX = parseInt(posX)
+        posY = parseInt(posY)
+      
+        //console.log(posX  + " " + posY)
+
+      
+        var elements = document.querySelectorAll(".case");
+        elements.forEach(function(elem){
+          
+          
+          var posXT = elem.style.left
+          var posYT = elem.style.top
+          
+          posXT = posXT.substring(0, posXT.length-2)
+          posYT = posYT.substring(0, posYT.length-2)
+          
+          posXT = parseInt(posXT)
+          posYT = parseInt(posYT)
+          
+          console.log(posXT + " "+posYT)
+          
+          // Cas en haut
+          if(posXT == posX && posYT == posY-102)
+            elem.className = "caseR"
+          
+          // Cas à droite
+          if(posXT == posX+102 && posYT == posY)
+            elem.className = "caseO"
+          
+          // Cas en bas
+          if(posXT == posX && posYT == posY+102)
+            elem.className = "caseJ"
+          
+          // Cas à gauche
+          if(posXT == posX-102 && posYT == posY)
+            elem.className = "caseV"
+            
+        });        
 	}
 
 </script>
