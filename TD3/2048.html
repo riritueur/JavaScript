@@ -53,6 +53,9 @@
 		 }
 		 
 		var grille = new Array(Array(MaCase));
+		var lastMoved = undefined;
+		var hasMoved = false;
+		var hasFusionned = false;
 		 
     function init(){
       
@@ -74,7 +77,13 @@
     }
 		 
 		 function insertionValeur(valeur, coordonnee){
+			 
+			 if(lastMoved != undefined)
+				 lastMoved.nouvelle = false;
 			 grille[coordonnee.abs][coordonnee.ord].valeur = valeur;
+			 lastMoved = grille[coordonnee.abs][coordonnee.ord];
+			 lastMoved.nouvelle = true;
+			 
 		 }
 		 
 		 function obtenirNouvelleValeur(){
@@ -125,6 +134,12 @@
 						tasserVersHaut(i);
 					}
 				}
+			 if(hasMoved || hasFusionned){
+				 	insertionValeur(obtenirNouvelleValeur(), obtenirCaseVide());
+					afficherGrille();
+				  hasMoved = false;
+				 	hasFusionned = false;
+			 }
 		 }
 		 
 		 function estLigneVide(ligne){
@@ -146,6 +161,7 @@
 							 grille[currentPos-1][j].valeur = grille[currentPos][j].valeur;
 							 grille[currentPos][j].valeur = "";
 							 console.log("moving value " + currentPos + ";" + j + " to " + currentPos-1 + ";" + j);
+							 hasMoved = true;
 						 }
 						 else{
 							 done = true;
@@ -168,6 +184,7 @@
 					 if(grille[i+1][j].valeur == grille[i][j].valeur && grille[i+1][j].valeur != ""){
 						 grille[i][j].valeur *= 2;
 						 grille[i+1][j].valeur = "";
+						 hasFusionned = true;
 					 }
 				 }
 			 }
@@ -180,6 +197,8 @@
 					 elements[i*4+j].innerHTML = "<h1>" + grille[i][j].valeur + "</h1>";
 					 if(grille[i][j].nouvelle)
 						 elements[i*4+j].style.backgroundColor = "red";
+					 else
+						 elements[i*4+j].style.backgroundColor = "#d2d2d2";
 				 }
 			 }
 		 }
