@@ -120,7 +120,7 @@
 			 console.log("pressed up");
 			 for(var i = 0; i < 4; i++){
 					if(!estLigneVide(grille[i])){
-						tasserVersHaut(grille[i],i);
+						tasserVersHaut(i);
 					}
 				}
 		 }
@@ -134,23 +134,26 @@
 			 return res;
 		 }
 		 
-		 function tasserVersHaut(ligne,i){
+		 function tasserVersHaut(i){
 			 for(var j = 0; j < 4; j++){
 				 var done = false;
+				 var currentPos = i;
 				 if(i != 0){
 					 while(!done){
-						 if(grille[i-1][j].valeur == ""){
-							 grille[i-1][j].valeur = ligne[j].valeur;
-							 ligne[j].valeur = "";
-							 console.log("moving value " + i + ";" + j " to " + (i-1) + ";" + j);
+						 if(grille[currentPos-1][j].valeur == ""){
+							 grille[currentPos-1][j].valeur = grille[currentPos][j].valeur;
+							 grille[currentPos][j].valeur = "";
+							 console.log("moving value " + currentPos + ";" + j + " to " + currentPos-1 + ";" + j);
 						 }
 						 else{
 							 done = true;
+							 console.log("encountered filled case");
 						 }
-						 if(i-1 == 0){
+						 if(currentPos-1 <= 0){
 							 done = true;
+							 console.log("end of board");
 						 }
-						 i--;
+						 currentPos--;
 					 }
 				 }
 			 }
