@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>AJAX</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body onload="init()">
+
+<form>
+<p>
+     <select id="rss_selector">
+         <option value="0">--- Sélectionner un flux ---</option>
+          <option value="http://www.societe-informatique-de-france.fr/feed/">SIF</option>
+          <option value="http://filuns.unice.fr/accueil/@@rss_view">UNS</option>
+          <option value="http://pro.clubic.com/actualites.rss.">Clubic</option>
+     </select>
+
+     <input type="submit" value="Envoyer" title="Envoyer" />
+
+</p>
+</form>
+
+<div id="rss_affiche">
+  
+</div>
+
+
+</body>
+
+<!--
+<script type="text/javascript" src="script1.js"></script>
+-->
+
+<script type="text/javascript">
+  
+  var xhttp
+  
+  window.addEventListener("load", init())
+  document.getElementById("rss_selector").addEventListener("on change", selectionRSS(//todo))
+  
+  function init(){
+    xhttp = new XMLHttpRequest();
+  }
+  
+  function selectionRSS(valeur){
+    
+  }
+  
+  function maCallback(data){
+    document.getElementById("rss_affiche").innerHTML = data;
+  }
+  
+</script>
+
+
+</html>
