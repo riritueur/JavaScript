@@ -36,9 +36,44 @@
   
    <script type="text/javascript">
      
+		 class maCase{
+			 constructor(valeur,nouvelle){
+				 this.valeur = valeur;
+				 this.nouvelle = nouvelle;
+			 }
+		 }
+		 
     function init(){
-      
+      var grille = new Array(Array(maCase));
+			for(var i = 0; i < 4; i++){
+				var ligne = Array();
+				for(var j = 0; j < 4; j++){
+					ligne[j] = new maCase("",false);
+				}
+				grille[i] = ligne;
+			}
+			
+			window.addEventListener("onkeypress",actionClavier,false);
+			
+			var ord1 = Math.floor(Math.random() * 4);
+			var ord2 = Math.floor(Math.random() * 4);
+			var abs1 = Math.floor(Math.random() * 4);
+			var abs2 = Math.floor(Math.random() * 4);
+			
+			grille[abs1][ord1].valeur = 2;
+			grille[abs2][ord2].valeur = 2;
+			
+			afficherGrille();
+			
     }
+		 
+		 function actionClavier(){
+			 
+		 }
+		 
+		 function afficherGrille(){
+			 
+		 }
      
   </script>
   
