@@ -37,7 +37,7 @@
   <!-- <script type="text/javascript" src="script2.js"></script> -->
   
    <script type="text/javascript">
-     
+		 
 		 class MaCase{
 			 constructor(valeur,nouvelle){
 				 this.valeur = valeur;
@@ -52,8 +52,10 @@
 			 }
 		 }
 		 
+		var grille = new Array(Array(MaCase));
+		 
     function init(){
-      var grille = new Array(Array(MaCase));
+      
 			for(var i = 0; i < 4; i++){
 				var ligne = Array();
 				for(var j = 0; j < 4; j++){
@@ -62,16 +64,16 @@
 				grille[i] = ligne;
 			}
 			
-			window.addEventListener("onkeydown",actionClavier,false);
+			window.addEventListener("keydown",actionClavier,false);
 			
-			insertionValeur(obtenirNouvelleValeur(), obtenirCaseVide(grille), grille);
-			insertionValeur(obtenirNouvelleValeur(), obtenirCaseVide(grille), grille);
+			insertionValeur(obtenirNouvelleValeur(), obtenirCaseVide());
+			insertionValeur(obtenirNouvelleValeur(), obtenirCaseVide());
 			
-			afficherGrille(grille);
+			afficherGrille();
 			
     }
 		 
-		 function insertionValeur(valeur, coordonnee, grille){
+		 function insertionValeur(valeur, coordonnee){
 			 grille[coordonnee.abs][coordonnee.ord].valeur = valeur;
 		 }
 		 
@@ -82,7 +84,7 @@
 			 else return 2;
 		 }
 		 
-		 function obtenirCaseVide(grille){
+		 function obtenirCaseVide(){
 			 if(existsCaseVide(grille)){
 				 var found = false;
 				 while(!found){
@@ -96,7 +98,7 @@
 			 }
 		 }
 		 
-		 function existsCaseVide(grille){
+		 function existsCaseVide(){
 			 var res = false;
 			 grille.forEach(function(elem){
 				 elem.forEach(function(elem2){
@@ -108,18 +110,65 @@
 			 return res;
 		 }
 		 
-		 function actionClavier(){
-			 
+		 function actionClavier(e){
+			 console.log("key pressed");
+			 if(e.keyCode == 38)
+				 deplacementVersHaut();
 		 }
 		 
-		 function afficherGrille(grille){
+		 function deplacementVersHaut(){
+			 console.log("pressed up");
+			 for(var i = 0; i < 4; i++){
+					if(!estLigneVide(grille[i])){
+						tasserVersHaut(grille[i],i);
+					}
+				}
+		 }
+		 
+		 function estLigneVide(ligne){
+			 var res = true;
+			 ligne.forEach(function(caseee){
+				 if(caseee.valeur != "")
+					 res = false;
+			 });
+			 return res;
+		 }
+		 
+		 function tasserVersHaut(ligne,i){
+			 for(var j = 0; j < 4; j++){
+				 var done = false;
+				 if(i != 0){
+					 while(!done){
+						 if(grille[i-1][j].valeur == ""){
+							 grille[i-1][j].valeur = ligne[j].valeur;
+							 ligne[j].valeur = "";
+							 console.log("moving value " + i + ";" + j " to " + (i-1) + ";" + j);
+						 }
+						 else{
+							 done = true;
+						 }
+						 if(i-1 == 0){
+							 done = true;
+						 }
+						 i--;
+					 }
+				 }
+			 }
+			 afficherGrille();
+		 }
+		 
+		 function afficherGrille(){
 			 var elements = document.body.querySelectorAll(".case");
 			 for(var i = 0; i < 4; i++){
 				 for(var j = 0; j < 4; j++){
 					 elements[i*4+j].innerHTML = "<h1>" + grille[i][j].valeur + "</h1>";
+					 if(grille[i][j].nouvelle)
+						 elements[i*4+j].style.backgroundColor = "red";
 				 }
 			 }
 		 }
+		 
+		 
      
   </script>
   
