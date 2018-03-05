@@ -58,7 +58,7 @@ function select() {
       var casevide = document.body.querySelector(".case.vide");
       var tmp = this.innerHTML;
 
-      this.classList.add("case", "vide");
+      this.classList.add("vide");
       casevide.classList.remove("vide");
 
       this.innerHTML = casevide.innerHTML;
