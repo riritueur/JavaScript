@@ -2,7 +2,8 @@
 
 
 La page HTML de l'exercice est disponible [ici](index.html)
-Le script JS de l'exercice est disponible [ici](scripts.js)
+Le script JS de l'exercice 1 est disponible [ici](script1.js)
+Le script JS de l'exercice 2 est disponible [ici](script2.js)
 
 
 ------------
@@ -14,7 +15,7 @@ Le script JS de l'exercice est disponible [ici](scripts.js)
 
 1.  Que pouvez-vous dire de l’architecture de l’application ?
 
-    ss
+    Elle est architecturale.
     
     
 ## 5) Exercice 2
