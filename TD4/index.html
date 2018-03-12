@@ -11,7 +11,7 @@
 <!--
 <form id="myform" onsubmit="selectionRSS()" action="#">
 -->
-<form id="myform" onsubmit="selectionRSS()" target="_blank" action="proxy.php">
+<form id="myform" onsubmit="selectionRSS()" target="_blank" action="./proxy.php" method="post">
 
 <p>
      <!--<select id="rss_selector">
@@ -26,8 +26,8 @@
           <option value="uns.xml">UNS</option>
           <option value="clubic.xml">Clubic</option>
      </select>-->
-     <select id="rss_url">
-         <option value="">--- Sélectionner un flux ---</option>
+     <select id="rssURL" name="rssURL">
+         <option value="null">--- Sélectionner un flux ---</option>
           <option value="http://www.societe-informatique-de-france.fr/feed/">SIF</option>
           <option value="http://filuns.unice.fr/accueil/@@rss_view">UNS</option>
           <option value="http://pro.clubic.com/actualites.rss">Clubic</option>
@@ -52,7 +52,6 @@
 <script type="text/javascript">
     
   window.addEventListener("load", init())
-  var select = document.getElementById("rss_selector")
   
   var xmlhttp
   
@@ -61,13 +60,13 @@
   }
   
   function selectionRSS(){
-    var valeur = document.forms["myform"]["rss_selector"].value
+    //var valeur = document.forms["myform"]["rss_selector"].value
+    var valeur = document.forms["myform"]["rssURL"].value
     if(valeur != "null") {
       //alert(valeur)
       xmlhttp.open("GET", valeur, true);
       xmlhttp.addEventListener('readystatechange', function() {
       if (xmlhttp.readyState == 4 && (xmlhttp.status == 200 || xmlhttp.status == 0))
-        console.log("ok = " + xmlhttp.responseText);
         maCallback(xmlhttp.responseText)
       });
       //xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
