@@ -8,13 +8,29 @@
 
 <body onload="init()">
 
-<form>
+<!--
+<form id="myform" onsubmit="selectionRSS()" action="#">
+-->
+<form id="myform" onsubmit="selectionRSS()" target="_blank" action="proxy.php">
+
 <p>
-     <select id="rss_selector">
-         <option value="0">--- Sélectionner un flux ---</option>
+     <!--<select id="rss_selector">
+         <option value="null">--- Sélectionner un flux ---</option>
           <option value="http://www.societe-informatique-de-france.fr/feed/">SIF</option>
           <option value="http://filuns.unice.fr/accueil/@@rss_view">UNS</option>
-          <option value="http://pro.clubic.com/actualites.rss.">Clubic</option>
+          <option value="http://pro.clubic.com/actualites.rss">Clubic</option>
+     </select>-->
+     <!--<select id="rss_selector">
+         <option value="null">--- Sélectionner un flux ---</option>
+          <option value="SF.xml">SIF</option>
+          <option value="uns.xml">UNS</option>
+          <option value="clubic.xml">Clubic</option>
+     </select>-->
+     <select id="rss_url">
+         <option value="">--- Sélectionner un flux ---</option>
+          <option value="http://www.societe-informatique-de-france.fr/feed/">SIF</option>
+          <option value="http://filuns.unice.fr/accueil/@@rss_view">UNS</option>
+          <option value="http://pro.clubic.com/actualites.rss">Clubic</option>
      </select>
 
      <input type="submit" value="Envoyer" title="Envoyer" />
@@ -34,22 +50,33 @@
 -->
 
 <script type="text/javascript">
-  
-  var xhttp
-  
+    
   window.addEventListener("load", init())
-  document.getElementById("rss_selector").addEventListener("on change", selectionRSS(//todo))
+  var select = document.getElementById("rss_selector")
+  
+  var xmlhttp
   
   function init(){
-    xhttp = new XMLHttpRequest();
+    xmlhttp = new XMLHttpRequest();
   }
   
-  function selectionRSS(valeur){
-    
+  function selectionRSS(){
+    var valeur = document.forms["myform"]["rss_selector"].value
+    if(valeur != "null") {
+      //alert(valeur)
+      xmlhttp.open("GET", valeur, true);
+      xmlhttp.addEventListener('readystatechange', function() {
+      if (xmlhttp.readyState == 4 && (xmlhttp.status == 200 || xmlhttp.status == 0))
+        console.log("ok = " + xmlhttp.responseText);
+        maCallback(xmlhttp.responseText)
+      });
+      //xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xmlhttp.send(null);
+    }
   }
   
   function maCallback(data){
-    document.getElementById("rss_affiche").innerHTML = data;
+    document.getElementById("rss_affiche").innerText = data;
   }
   
 </script>

@@ -14,11 +14,11 @@ Le script JS de l'exercice est disponible [ici](script1.js)
 
 1.  Quelle erreur obtenez-vous ?
 
-    ss
+    Il est impossible de charger le flux avec une requete Ajax sur un domaine extérieur (sans proxy)
     
 2.  Pourquoi la solution ci-dessus de fonctionne pas ?
 
-    ss
+    Car il faut mettre en place un proxy pour pouvoir récupérer des valeurs de domaines extérieurs avec Ajax
     
 ------------
 

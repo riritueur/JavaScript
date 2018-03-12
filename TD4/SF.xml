@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>SIF</title>
+	<atom:link href="http://www.societe-informatique-de-france.fr/feed/" rel="self" type="application/rss+xml" />
+	<link>http://www.societe-informatique-de-france.fr</link>
+	<description></description>
+	<lastBuildDate>Mon, 05 Mar 2018 15:45:57 +0000</lastBuildDate>
+	<language>fr-FR</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=4.8</generator>
+
+<image>
+	<url>http://www.societe-informatique-de-france.fr/wp-content/uploads/2013/07/cropped-cropped-logo-32x32.png</url>
+	<title>SIF</title>
+	<link>http://www.societe-informatique-de-france.fr</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Communiqué sur la réforme du bac et du lycée</title>
+		<link>http://www.societe-informatique-de-france.fr/2018/02/communique-sur-la-reforme-du-bac-et-du-lycee/</link>
+		<pubDate>Wed, 21 Feb 2018 10:35:32 +0000</pubDate>
+		<dc:creator><![CDATA[Thierry GARCIA]]></dc:creator>
+				<category><![CDATA[Actualités]]></category>
+		<category><![CDATA[Actualités 2018]]></category>
+		<category><![CDATA[Enseignement]]></category>
+
+		<guid isPermaLink="false">http://www.societe-informatique-de-france.fr/?p=6930</guid>
+		<description><![CDATA[Communiqué de la Société Informatique de France (SIF) sur la réforme du bac et du lycée présentée par J-M Blanquer  :  Lire le communiqué de la SIF]]></description>
+		</item>
+		<item>
+		<title>Palmarès du concours #ScienceInfoStream</title>
+		<link>http://www.societe-informatique-de-france.fr/2018/01/palmares-du-concours-scienceinfostream/</link>
+		<pubDate>Tue, 23 Jan 2018 22:25:29 +0000</pubDate>
+		<dc:creator><![CDATA[Sylvie Alayrangues]]></dc:creator>
+				<category><![CDATA[Actualités 2018]]></category>
+		<category><![CDATA[Médiation]]></category>
+
+		<guid isPermaLink="false">http://www.societe-informatique-de-france.fr/?p=6759</guid>
+		<description><![CDATA[Le palmarès du concours #ScienceInfoStream est en ligne. Félicitations aux auteurs et à leurs équipes : Steven de Oliveira pour l&#8217;obtention du premier prix avec la vidéo « Ressources humaines » , et pour les deux accessits ex-aequo (dans l&#8217;ordre alphabétique) Axel Palaude avec « Faire parler une machine à café » et Natacha Portier avec « Un ordinateur en [&#8230;]]]></description>
+<enclosure url="http://steven-de-oliveira.fr/content/videos/Ressources_Humaines.mp4" length="134275334" type="video/mp4" />
+		</item>
+		<item>
+		<title>Sciences &#038; Médias 2018 : Comment lutter contre la désinformation scientifique ?</title>
+		<link>http://www.societe-informatique-de-france.fr/2018/01/sciences-medias-2018-comment-lutter-contre-la-desinformation-scientifique/</link>
+		<pubDate>Fri, 05 Jan 2018 09:54:21 +0000</pubDate>
+		<dc:creator><![CDATA[Fabien Tarissan]]></dc:creator>
+				<category><![CDATA[Actualités]]></category>
+		<category><![CDATA[Actualités 2018]]></category>
+		<category><![CDATA[Médiation]]></category>
+
+		<guid isPermaLink="false">http://www.societe-informatique-de-france.fr/?p=6715</guid>
+		<description><![CDATA[Organisées tous les deux ans par la SFP, la SCF, la SMF, la SIF, la SMAI, la SFdS, la BnF et l&#8217;AJSPI, les journées Sciences &#38; Médias rassemblent journalistes, médiateurs, auteurs et scientifiques autour de la question de la place des sciences dans les médias. &#160; La dernière Journée Sciences &#38; Médias s&#8217;est tenue à [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Audition du groupe interdisciplinaire sur l&#8217;enseignement des sciences au lycée</title>
+		<link>http://www.societe-informatique-de-france.fr/2017/12/audition-du-groupe-interdisciplinaire-sur-lenseignement-des-sciences-au-lycee/</link>
+		<pubDate>Fri, 15 Dec 2017 21:15:12 +0000</pubDate>
+		<dc:creator><![CDATA[Christine Froidevaux]]></dc:creator>
+				<category><![CDATA[Actualités]]></category>
+		<category><![CDATA[Actualités 2017]]></category>
+		<category><![CDATA[Enseignement]]></category>
+
+		<guid isPermaLink="false">http://www.societe-informatique-de-france.fr/?p=6704</guid>
+		<description><![CDATA[Le groupe interdisciplinaire sur l&#8217;enseignement des sciences au lycée dont la SIF fait partie a été auditionné par la commission animée par Pierre Mathiot, dans le cadre de la concertation sur la réforme du baccalauréat. Les quatre membres représentant les  disciplines mathématiques, physique-chimie, sciences de la vie et de la terre et informatique, ont été [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Audition de la SIF par la mission enseignement des mathématiques</title>
+		<link>http://www.societe-informatique-de-france.fr/2017/12/audition-sif-par-la-mission-enseignement-des-mathematiques/</link>
+		<pubDate>Fri, 15 Dec 2017 13:15:15 +0000</pubDate>
+		<dc:creator><![CDATA[Jean-Marc Petit]]></dc:creator>
+				<category><![CDATA[Actualités 2017]]></category>
+		<category><![CDATA[Enseignement]]></category>
+
+		<guid isPermaLink="false">http://www.societe-informatique-de-france.fr/?p=6696</guid>
+		<description><![CDATA[La Société informatique de France (SIF) a été auditionnée le 23 novembre 2017 (avec France IOI et INRIA) par la mission Enseignement des mathématiques animée par Charles Torossian et Cédric Villani. Sur la base d’une liste de questions préalablement posées par la mission, la SIF a rédigé ce document dont une version préliminaire a été [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>La SIF et l&#8217;EPI reçues par la mission Mathiot sur la réforme du baccalauréat</title>
+		<link>http://www.societe-informatique-de-france.fr/2017/12/mathiot-bac-sif-epi/</link>
+		<pubDate>Tue, 12 Dec 2017 21:48:21 +0000</pubDate>
+		<dc:creator><![CDATA[Philippe Marquet]]></dc:creator>
+				<category><![CDATA[Actualités]]></category>
+		<category><![CDATA[Actualités 2017]]></category>
+		<category><![CDATA[Enseignement]]></category>
+
+		<guid isPermaLink="false">http://www.societe-informatique-de-france.fr/?p=6687</guid>
+		<description><![CDATA[Le 5 décembre 2017, la Société informatique de France (SIF) et l&#8217;association Enseignement public et informatique (EPI) ont été auditionnées dans le cadre de la concertation sur la réforme du baccalauréat, mission pilotée par Pierre Mathiot. La réforme du baccalauréat impliquant une réforme du lycée, la réflexion a porté essentiellement sur l&#8217;enseignement de l&#8217;informatique au [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Claude Delobel, Hélène Kirchner, Eric Pilaud, Véronique Torner : Membres d’honneur de la SIF, 2018</title>
+		<link>http://www.societe-informatique-de-france.fr/2017/11/claude-delobel-helene-kirchner-eric-pilaud-veronique-torner-membres-dhonneur-de-la-sif-2018/</link>
+		<pubDate>Wed, 29 Nov 2017 09:20:26 +0000</pubDate>
+		<dc:creator><![CDATA[Catherine Berrut]]></dc:creator>
+				<category><![CDATA[Actualités]]></category>
+
+		<guid isPermaLink="false">http://www.societe-informatique-de-france.fr/?p=6622</guid>
+		<description><![CDATA[Claude Delobel, Hélène Kirchner, Eric Pilaud et Véronique Torner sont les Membres d&#8217;Honneur 2018 de la SIF. Toutes les informations. Venez les écouter au congrès 2018 de la SIF.]]></description>
+		</item>
+		<item>
+		<title>Prix de thèse Gilles Kahn 2017</title>
+		<link>http://www.societe-informatique-de-france.fr/2017/11/prix-de-these-gilles-kahn-2017-2/</link>
+		<pubDate>Wed, 29 Nov 2017 07:24:05 +0000</pubDate>
+		<dc:creator><![CDATA[Catherine Berrut]]></dc:creator>
+				<category><![CDATA[Actualités]]></category>
+		<category><![CDATA[Actualités 2017]]></category>
+		<category><![CDATA[Recherche]]></category>
+
+		<guid isPermaLink="false">http://www.societe-informatique-de-france.fr/?p=6617</guid>
+		<description><![CDATA[Le prix de thèse Gilles Kahn 2017 est attribué à   Amina Doumane, pour sa thèse intitulée « On the infinitary proof theory of logics with fixed points » soutenue à l&#8217;Université Paris-Diderot et préparée à l&#8217;Institut de Recherche en Informatique Fondamentale (IRIF) et au Laboratoire Spécification et Vérification (LSV) sous la direction de David Baelde, Alexis Saurin et [&#8230;]]]></description>
+		</item>
+		<item>
+		<title>Communiqué suite à l&#8217;édito éco de Dominique Seux sur France Inter</title>
+		<link>http://www.societe-informatique-de-france.fr/2017/11/communique-suite-a-ledito-eco-de-dominique-seux-sur-france-inter/</link>
+		<pubDate>Fri, 10 Nov 2017 10:41:02 +0000</pubDate>
+		<dc:creator><![CDATA[Jean-Marc Petit]]></dc:creator>
+				<category><![CDATA[Actualités]]></category>
+		<category><![CDATA[Actualités 2017]]></category>
+		<category><![CDATA[Enseignement]]></category>
+
+		<guid isPermaLink="false">http://www.societe-informatique-de-france.fr/?p=6522</guid>
+		<description><![CDATA[Les présidents de la SiF et de Specif Campus se sont associés pour écrire un communiqué après l&#8217;édito de Dominique Seux sur France Inter. Nous espérons qu&#8217;un droit de réponse sera apporté par Dominique Seux et/ou la direction de France Inter. &#160;]]></description>
+		</item>
+		<item>
+		<title>Le 24 octobre de Class&#8217;code</title>
+		<link>http://www.societe-informatique-de-france.fr/2017/10/le-24-octobre-de-classcode/</link>
+		<pubDate>Tue, 24 Oct 2017 21:24:47 +0000</pubDate>
+		<dc:creator><![CDATA[Sylvie Alayrangues]]></dc:creator>
+				<category><![CDATA[Actualités]]></category>
+		<category><![CDATA[Médiation]]></category>
+
+		<guid isPermaLink="false">http://www.societe-informatique-de-france.fr/?p=6476</guid>
+		<description><![CDATA[Le 24 octobre est un jour à marquer d&#8217;une pierre blanche dans l&#8217;histoire de Class&#8217;Code. Pour commencer, une nouvelle version du site a été mise en ligne qui améliore l&#8217;accessibilité aux différentes ressources et rend plus facile la mise en relation des différents participants.                  Et point d&#8217;orgue de la journée,  Class&#8217;Code [&#8230;]]]></description>
+		</item>
+	</channel>
+</rss>
