@@ -67,7 +67,7 @@
       xmlhttp.open("GET", valeur, true);
       xmlhttp.addEventListener('readystatechange', function() {
       if (xmlhttp.readyState == 4 && (xmlhttp.status == 200 || xmlhttp.status == 0))
-        maCallback(xmlhttp.responseText)
+        maCallback(xmlhttp.responseXML)
       });
       //xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xmlhttp.send(null);
@@ -75,7 +75,53 @@
   }
   
   function maCallback(data){
-    document.getElementById("rss_affiche").innerText = data;
+		console.log("xml loaded");
+		var text_rss = "";
+    text_rss += "<h1>" + data.getElementsByTagName("title")[0].childNodes[0].nodeValue + "</h1>";
+		var image = data.getElementsByTagName("image")[0];
+		var src_img = image.getElementsByTagName("url")[0].childNodes[0].nodeValue;
+		var lien_img = image.getElementsByTagName("link")[0].childNodes[0].nodeValue;
+		text_rss += "<h1><a href=\"" + lien_img + "\"><img src=\"" + src_img + "\"/></a></h1>";
+		
+		var itemList = data.getElementsByTagName("item");
+		
+		for(var i = 0; i < itemList.length; i++){
+			var item = itemList[i];
+			
+			text_rss += "<hr/>";
+  		var item_title = item.getElementsByTagName("title")[0].childNodes[0];
+			var item_link = item.getElementsByTagName("link")[0].childNodes[0];
+			var item_guid = item.getElementsByTagName("guid")[0].childNodes[0];
+			var item_desc = item.getElementsByTagName("description")[0].childNodes[0];
+			var item_categ = item.getElementsByTagName("category")[0].childNodes[0];
+			var item_pubDate = item.getElementsByTagName("pubDate")[0].childNodes[0];
+			var item_thumbnail = item.getElementsByTagName("media:thumbnail")[0].getAttributeNode("url");
+			
+			if(item_title != undefined)
+				text_rss += "<h2>" + item_title.nodeValue + "</h2>";
+			text_rss += "<p>";
+			if(item_link != undefined)
+				text_rss += "<a href=\"" + item_link.nodeValue + "\">Lien</a><br/>";
+			if(item_guid != undefined)
+				text_rss += "<a href=\"" + item_guid.nodeValue + "\">guid</a><br/>";
+			if(item_desc != undefined)
+				text_rss += "Description: " + item_desc.nodeValue + "<br/>";
+			if(item_categ != undefined)
+				text_rss += "Catégorie: " + item_categ.nodeValue + "<br/>";
+			if(item_pubDate != undefined)
+				text_rss += "Date de publication: " + item_pubDate.nodeValue + "<br/>";
+			text_rss += "</p>";
+			if(item_thumbnail != undefined)
+				text_rss += "<img height=\"300px\" src=\"" + item_thumbnail.nodeValue + "\"/><br/>";			
+			text_rss += "<hr/>";
+		}
+		
+		
+		
+		
+		
+		document.getElementById("rss_affiche").innerHTML = text_rss;
+		
   }
   
 </script>
