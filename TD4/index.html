@@ -11,8 +11,8 @@
 <!--
 <form id="myform" onsubmit="selectionRSS()" action="#">
 -->
-<form id="myform" onsubmit="selectionRSS()" target="_blank" action="./proxy.php" method="post">
-
+<!--<form id="myform" onsubmit="selectionRSS()" target="_blank" action="./proxy.php" method="post">-->
+<form id="myform" onsubmit="selectionRSS()" target="_blank" action="./proxyJson.php" method="post">
 <p>
      <!--<select id="rss_selector">
          <option value="null">--- Sélectionner un flux ---</option>
@@ -37,6 +37,12 @@
 
 </p>
 </form>
+	
+	<!--<form id="myform2" onsubmit="selectionRSS2()" target="_blank" action="./proxy.php" method="post">-->
+	<form id="myform2" onsubmit="selectionRSS2()" target="_blank" action="./proxyJson.php" method="post">
+		<input type="text" id="rssURL" name="rssURL"/>
+		<input type="submit" value="Envoyer" title="Envoyer" />
+	</form>
 
 <div id="rss_affiche">
   
@@ -59,6 +65,21 @@
     xmlhttp = new XMLHttpRequest();
   }
   
+	function selectionRSS2(){
+    //var valeur = document.forms["myform"]["rss_selector"].value
+    var valeur = document.forms["myform2"]["rssURL"].value
+    if(valeur != "null") {
+      //alert(valeur)
+      xmlhttp.open("GET", valeur, true);
+      xmlhttp.addEventListener('readystatechange', function() {
+      if (xmlhttp.readyState == 4 && (xmlhttp.status == 200 || xmlhttp.status == 0))
+        maCallback(xmlhttp.responseXML)
+      });
+      //xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xmlhttp.send(null);
+    }
+  }
+	
   function selectionRSS(){
     //var valeur = document.forms["myform"]["rss_selector"].value
     var valeur = document.forms["myform"]["rssURL"].value
