@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+ <head>
+  <title>Images et SlideShow</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!--
+ <script type="text/javascript" src="./script2.js"> </script>
+-->
+
+  <script type="text/javascript">
+  </script>
+
+</head>
+
+<body>
+  <div id="titre">Jeu de taquin</div>
+  <div id="interface">
+    <label for="form-large">Largeur (nb cases) : </label>
+    <input id="form-large" type="number" value="2" min="2" max="10" size="4" /><br/>
+    <label for="form-haut">Hauteur (nb cases) : </label>
+    <input id="form-haut" type="number" value="2" min="2" max="10" size="4" /><br/>
+    <label for="form-taille">Taille de la case : </label>
+    <input id="form-taille" type="number" value="10" min="5" max="20" /><br/>
+    <input id="form-nouveau" type="button" value="Nouveau plateau" />
+  </div>
+  <div id="presentation">Ordonnez les cases de la plus petite valeur à la plus grande, de gauche à droite puis de bas en haut. La case en haut à gauche devant être la case sans numéro. Celle en bas à droite aura la plus grande valeur.</div>
+  <div id="jeu"></div>
+  <p>Bravo !!</p>
+</body> 
+</html>
