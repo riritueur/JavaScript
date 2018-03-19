@@ -1,0 +1,113 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: dimgrey;
+  font-family:sans-serif; 
+}
+
+#jeu {
+  border-style: solid;
+  border-width: 1px;
+  background-color: #00008B;
+  margin: 0px;
+  width: 306px;
+  height: 306px;
+  position: absolute;
+}
+
+.case {
+  border-style: solid;
+  border-width: 1px;
+  background-color: #d2d2d2;
+  margin: 0px;
+  padding: 0px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 1;
+  transition-property: top, left;
+  transition-duration: 1s;
+}
+
+.caseR {
+  border-style: solid;
+  border-width: 1px;
+  background-color: red;
+  margin: 0px;
+  padding: 0px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 1;
+  transition-property: top, left;
+  transition-duration: 1s;
+}
+
+.caseV {
+  border-style: solid;
+  border-width: 1px;
+  background-color: green;
+  margin: 0px;
+  padding: 0px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 1;
+  transition-property: top, left;
+  transition-duration: 1s;
+}
+
+.caseJ {
+  border-style: solid;
+  border-width: 1px;
+  background-color: yellow;
+  margin: 0px;
+  padding: 0px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 1;
+  transition-property: top, left;
+  transition-duration: 1s;
+}
+
+.caseO {
+  border-style: solid;
+  border-width: 1px;
+  background-color: orangered;
+  margin: 0px;
+  padding: 0px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 1;
+  transition-property: top, left;
+  transition-duration: 1s;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+}
+
+p {
+	font-size: 18px;
+}
+
+a {
+	color:white;
+}
+
+a:hover {
+	color:lightgrey;
+}
+
+.vide {
+  background-color: #00008B;
+  z-index: 0;
+  border: none
+}
